@@ -1,7 +1,7 @@
 # criel-sur-mer-website-rework
 https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
-TODO :
+TODO soon ASAP:
 - Page principale (https://www.criel-sur-mer.fr/index.html)
 - Déchets (https://www.criel-sur-mer.fr/dechets-et-ordures-menageres.html)
 - Nous contacter (https://www.criel-sur-mer.fr/nous-contacter.html)
