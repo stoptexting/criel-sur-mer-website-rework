@@ -6,3 +6,8 @@
 .caption-text {
    background-color: rgba(110, 110, 110, 0.603);
 }
+
+.navbar-nav > li{
+    margin-left:10px;
+    margin-right:10px;
+  }
