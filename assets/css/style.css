@@ -1,13 +1,61 @@
-.center {
-    display: flex;
-    justify-content: center;
-}
-
-.caption-text {
-   background-color: rgba(110, 110, 110, 0.603);
-}
-
-.navbar-nav > li{
-    margin-left:10px;
-    margin-right:10px;
+body {
+    height:2000px;
+    margin: 0;
+    padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    background: #333;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
   }
+
+/* The only rule that matters */
+#video-background {
+/*  making the video fullscreen  */
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
+    -o-filter: blur(15px);
+    filter: blur(15px);
+}
+  
+h1 {
+    font-family: 'Syncopate', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 3vw;
+    text-align: center;
+    
+  }
+  
+
+  .overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51, 51, 51, 0.63);
+    z-index: 2;
+  }
+
+  section {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  * {
+	box-sizing: border-box;
+}
