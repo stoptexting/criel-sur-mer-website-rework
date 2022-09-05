@@ -2,3 +2,7 @@
     display: flex;
     justify-content: center;
 }
+
+.caption-text {
+   background-color: rgba(110, 110, 110, 0.377);
+}

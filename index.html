@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Hello, world!</title>
   </head>
@@ -14,13 +15,22 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="https://images.ctfassets.net/yqwtwibiobs4/7n1OUByKwzzxydau88ligE/b61dde05e73b1d25313774e4b7557556/shutterstock_505405807-small-1.jpg" alt="First slide">
+          <a href="https://www.google.com/maps/place/Lire+A+La+Plage/@50.0327906,1.3098456,16.62z/data=!4m13!1m7!3m6!1s0x47de026ff3a7b8e7:0x40c14484fb688a0!2s76910+Criel-sur-Mer!3b1!8m2!3d50.016388!4d1.317639!3m4!1s0x0:0xa3cea77c237578f1!8m2!3d50.0340979!4d1.3146935"><img class="d-block w-100" src="assets/others/photo1.jpg" alt="Photo 1"></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="caption-text">Les fameuses cabanes pour se changer</h5>
+          </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://images.ctfassets.net/xts27qnup0jr/QCOTaeIdILC9yFB9HY9jt/2f98a2f6340e34867617d171b5b2474e/Screenshot_2022-01-24_at_12.48.46.png" alt="Second slide">
+          <a href="https://www.google.com/maps/place/Plage+de+Mesnil+Val+Plage/@50.0457818,1.3271462,16.29z/data=!4m13!1m7!3m6!1s0x47de026ff3a7b8e7:0x40c14484fb688a0!2s76910+Criel-sur-Mer!3b1!8m2!3d50.016388!4d1.317639!3m4!1s0x47de0339993727e5:0x10a79f0297bb4425!8m2!3d50.0449112!4d1.3285917"><img class="d-block w-100" src="assets/others/photo2.jpg" alt="Photo 2"></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="caption-text"> Plage de Mesnil Val Plage</h5>
+          </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://monde-diplomatique.de/images/content/Atlas-2022_Kachel.jpg" alt="Third slide">
+          <a href="https://www.google.com/maps/place/Falaises+de+Criel-sur-Mer/@50.0312858,1.3051086,14.67z/data=!4m13!1m7!3m6!1s0x47de026ff3a7b8e7:0x40c14484fb688a0!2s76910+Criel-sur-Mer!3b1!8m2!3d50.016388!4d1.317639!3m4!1s0x0:0xf588f617d0a8808b!8m2!3d50.0288184!4d1.3018396"><img class="d-block w-100" src="assets/others/photo3.jpg" alt="Photo 3"></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="caption-text">Vue sur la Manche</h5>
+          </div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -32,6 +42,42 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
