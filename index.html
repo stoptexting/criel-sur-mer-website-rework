@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="assets/others/favicon.ico"/>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,7 +17,20 @@
   <body>
 
     <section id="visit">
-      Visiter Criel-sur-Mer
+      <div id="typed-strings">
+        <span id="typed"></span>
+        <script>
+
+            $( document ).ready(function() {
+              var typed = new Typed('#typed',{
+                    strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Alors, vous venez ?"],
+                    backSpeed: 40,
+                    typeSpeed: 40
+                  });
+            });
+          
+        </script>
+      </div>
     </section>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -95,7 +110,6 @@
     <video autoplay loop id="video-background" class="out" muted plays-inline>
       <source src="assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
     </video>
-
 
     <script src="assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
