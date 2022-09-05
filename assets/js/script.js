@@ -27,3 +27,13 @@ window.smoothScroll = function(target) {
   // start scrolling
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
+
+function init() {
+  $('body').css("overflow", "show");
+  document.getElementById("arrow_down").className = 'animate__animated animate__flash';
+        setTimeout(function () {
+            $( "#arrow_down" ).fadeOut( "slow", function() {});
+            smoothScroll(document.getElementById('navigando'));
+        }, 2500); 
+  
+}
