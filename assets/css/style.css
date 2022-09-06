@@ -22,7 +22,7 @@ body {
     -o-filter: blur(5px);
     filter: blur(5px);
 }
-  
+
 h1 {
     font-family: 'Syncopate', sans-serif;
     color: white;
@@ -64,10 +64,12 @@ h1 {
 }
 
 #arrow_down {
-    margin-top: 50%; 
-    height: 5%; 
-    position:fixed;
+    margin-top: 25%;
+    height: 4vw; 
+    position: fixed;
 }
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
+
+#typed {font-size: 5vw}

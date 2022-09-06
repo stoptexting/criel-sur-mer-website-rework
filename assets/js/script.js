@@ -2,6 +2,12 @@ $( document ).ready(function() {
   $('body').css("overflow", "hidden");
   const video = document.getElementById('video-background');
   video.currentTime += 5;
+
+  var typed = new Typed('#typed',{
+    strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Alors, vous venez ?"],
+    backSpeed: 40,
+    typeSpeed: 40
+  });
 });
 
 // thanks to https://jsfiddle.net/rjSfP/
@@ -28,12 +34,17 @@ window.smoothScroll = function(target) {
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
+var scroll = new SmoothScroll('a[href*="#"]');
+
 function init() {
-  $('body').css("overflow", "show");
+
   document.getElementById("arrow_down").className = 'animate__animated animate__flash';
-        setTimeout(function () {
-            $( "#arrow_down" ).fadeOut( "slow", function() {});
-            smoothScroll(document.getElementById('navigando'));
-        }, 2500); 
+  setTimeout(function () {
+      
+      $( "#arrow_down" ).fadeOut( "slow", function() {});
+      smoothScroll(document.getElementById('navigando'));
+      $("#video-background").css({"overflow-y":"scroll"});
+      console.log("lol")
+  }, 2500); 
   
 }
