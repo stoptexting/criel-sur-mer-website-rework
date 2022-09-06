@@ -136,12 +136,16 @@ h1 {
   z-index: 5;
 }
 
+
+
 .row {
-  padding: 2vw;
+  margin: 0.5vw;
 }
 
 .shortcut-div{
   padding: 0;
+  height: 2vh;
+  width: 2vm;
 }
 
 .shortcut > i {
