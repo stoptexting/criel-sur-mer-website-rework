@@ -1,6 +1,5 @@
 body {
-    min-height: 80%;
-    height: 90vh; /**/
+    height: 80%;
     margin: 0;
     padding: 0;
   /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
@@ -137,8 +136,6 @@ h1 {
   z-index: 5;
 }
 
-
-
 .row {
   margin: 0.5vw;
 }
@@ -151,4 +148,8 @@ h1 {
 
 .shortcut > i {
   font-size: 2vw;
+}
+
+#informations {
+  padding-bottom: 15px;
 }

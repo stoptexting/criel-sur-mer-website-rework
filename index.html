@@ -1,193 +1,218 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="assets/others/favicon.ico"/>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="assets/js/smooth-scroll.polyfills.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
-    
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="assets/others/favicon.ico" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <title>Accueil</title>
-  </head>
-  <body>
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="assets/js/smooth-scroll.polyfills.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
-    <section id="visit">  
-      <div id="typed-strings">
-        <span id="typed"></span>
-      </div>
-      <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando" src="assets/others/arrow_down.svg" onclick="init()" alt="arrow_down"/></a>
-    </section>
 
-    <div id="main_page" class="container-fluid" style="background-color: rgba(227, 242, 254, 0.281);">
-      <nav id="navigando" class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fe;">
-        <img src="assets/others/criel_logo.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Accueil <span class="sr-only">(vous êtes ici)</span></a>
-            </li>
-  
-            <!-- Municipalité -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Municipalité
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Conseil municipal</a>
-                <a class="dropdown-item" href="#">Compte rendus conseil municipal</a>
-                <a class="dropdown-item" href="#">Services Municipaux</a>
-                <a class="dropdown-item" href="#">Marchés publics</a>
-                <a class="dropdown-item" href="#">Bulletin municipal</a>
-              </div>
-            </li>
-            <!-- Municipalité end -->
-  
-            <!-- Service Administratif -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Service Administratif
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Urbanisme</a>
-                <a class="dropdown-item" href="#">CCAS</a>
-                <a class="dropdown-item" href="#">Enfance vie-scolaire</a>
-                <a class="dropdown-item" href="#">Médiatheque</a>
-                <a class="dropdown-item" href="#">Etat civil</a>
-                <a class="dropdown-item" href="#">Démarches en ligne</a>
-                <a class="dropdown-item" href="#">Offre d'emploi</a>
-              </div>
-            </li>
-            <!-- Service Administratif end -->
-            
-            <!-- Tourisme Patrimoine Nature -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tourisme Patrimoine Nature
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Office de tourisme</a>
-                <a class="dropdown-item" href="#">Hébergement chantereine</a>
-                <a class="dropdown-item" href="#">Camping</a>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Camping le mont joli bois</a></li>
-                  <li><a class="dropdown-item" href="#">Aires de camping car</a></li>
-                </ul>
-                <a class="dropdown-item" href="#">Plage</a>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Eaux de baignade</a></li>
-                  <li><a class="dropdown-item" href="#">Cabines de plages</a></li>
-                </ul>
-                <a class="dropdown-item" href="#">Visites et patrimoine</a>
-                <a class="dropdown-item" href="#">Nature</a>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Biodiversité</a></li>
-                  <ul>
-                      <li><a class="dropdown-item" href="#">Atlas biodiversité</a></li>
-                      <li><a class="dropdown-item" href="#">Zéro python</a></li>
-                  </ul>
-                  <li><a class="dropdown-item" href="#">Espèces nuisiles</a></li>
-                  <ul>
-                      <li><a class="dropdown-item" href="#">Frelon asiatiques</a></li>
-                      <li><a class="dropdown-item" href="#">Plantes exotiques envahissantes</a></li>
-                  </ul>
-              </div>
-            </li>
-            <!-- Tourisme Patrimoine Nature end -->
-  
-            <!-- Tourisme Patrimoine Nature -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Informations Pratiques
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Déchets et ordures ménagères</a>
-                <a class="dropdown-item" href="#">Entretien voies et trottoir</a>
-                <a class="dropdown-item" href="#">Nuissances sonores</a>
-                <a class="dropdown-item" href="#">Qualité eau potable</a>
-                <a class="dropdown-item" href="#">Guide des professionnels</a>
-                <a class="dropdown-item" href="#">Guide des associations</a>
-                <a class="dropdown-item" href="#">Location de salles municipales</a>
-                <a class="dropdown-item" href="#">Carnet d'adresse</a>
-                <a class="dropdown-item" href="#">Liens utiles</a>
-                <a class="dropdown-item" href="#">Publications utiles</a>
-                <a class="dropdown-item" href="#">Marchés</a>
-                <a class="dropdown-item" href="#">Chiens perdus</a>
-                <a class="dropdown-item" href="#">Solidarité Ukraine</a>
-              </div>
-            </li>
-            <!-- Tourisme Patrimoine Nature end -->
-  
-            <li class="nav-item">
-              <a class="nav-link disabled" href="https://www.youtube.com/watch?v=iik25wqIuFo" tabindex="-1" aria-disabled="true">Festival</a>
-            </li>
-          </ul>
-      </nav>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-      <h1 class="display-4 title">Bienvenue sur le site de Criel-sur-mer</h1>
-      
-      <div id="shortcuts" class="container-fluid">
+  <title>Accueil</title>
+</head>
 
-        <div class="row">
-          <div class="col-sm text-center grow">
-            Les informations importantes:
-          </div>
-          <div class="col-sm text-center grow">
-            One of three columns
-          </div>
-          <div class="col-sm text-center grow">
-            En un clic !
+<body>
 
-            <div class="row">
-              <div class="col-sm text-center shortcut-div">
-                <button class="shortcut"><i class="fa fa-home"></i><br><p>Urbanisme</p></button>
-              </div>
-              <div class="col-sm text-center shortcut-div">
-                <button class="shortcut"><i class="fa fa-trash"></i><br><p>Ordures et déchets</p></button>
-              </div>
+  <section id="visit">
+    <div id="typed-strings">
+      <span id="typed"></span>
+    </div>
+    <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando"
+      src="assets/others/arrow_down.svg" onclick="init()" alt="arrow_down" /></a>
+  </section>
+
+  <div id="main_page" class="container-fluid" style="background-color: rgba(227, 242, 254, 0.281);">
+    <nav id="navigando" class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fe;">
+      <img src="assets/others/criel_logo.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Accueil <span class="sr-only">(vous êtes ici)</span></a>
+          </li>
+
+          <!-- Municipalité -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Municipalité
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Conseil municipal</a>
+              <a class="dropdown-item" href="#">Compte rendus conseil municipal</a>
+              <a class="dropdown-item" href="#">Services Municipaux</a>
+              <a class="dropdown-item" href="#">Marchés publics</a>
+              <a class="dropdown-item" href="#">Bulletin municipal</a>
             </div>
+          </li>
+          <!-- Municipalité end -->
 
-            <div class="row">
-              <div class="col-sm text-center shortcut-div">
-                <button class="shortcut"><i class="fa fa-pagelines"></i><br><p>Formalités Administratives</p></button>
-              </div>
-              <div class="col-sm text-center shortcut-div">
-                <button class="shortcut"><i class="fa fa-pagelines"></i><br><p>Atlas Biodiversité</p></button>
-              </div>
+          <!-- Service Administratif -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Service Administratif
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Urbanisme</a>
+              <a class="dropdown-item" href="#">CCAS</a>
+              <a class="dropdown-item" href="#">Enfance vie-scolaire</a>
+              <a class="dropdown-item" href="#">Médiatheque</a>
+              <a class="dropdown-item" href="#">Etat civil</a>
+              <a class="dropdown-item" href="#">Démarches en ligne</a>
+              <a class="dropdown-item" href="#">Offre d'emploi</a>
+            </div>
+          </li>
+          <!-- Service Administratif end -->
+
+          <!-- Tourisme Patrimoine Nature -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Tourisme Patrimoine Nature
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Office de tourisme</a>
+              <a class="dropdown-item" href="#">Hébergement chantereine</a>
+              <a class="dropdown-item" href="#">Camping</a>
+              <ul>
+                <li><a class="dropdown-item" href="#">Camping le mont joli bois</a></li>
+                <li><a class="dropdown-item" href="#">Aires de camping car</a></li>
+              </ul>
+              <a class="dropdown-item" href="#">Plage</a>
+              <ul>
+                <li><a class="dropdown-item" href="#">Eaux de baignade</a></li>
+                <li><a class="dropdown-item" href="#">Cabines de plages</a></li>
+              </ul>
+              <a class="dropdown-item" href="#">Visites et patrimoine</a>
+              <a class="dropdown-item" href="#">Nature</a>
+              <ul>
+                <li><a class="dropdown-item" href="#">Biodiversité</a></li>
+                <ul>
+                  <li><a class="dropdown-item" href="#">Atlas biodiversité</a></li>
+                  <li><a class="dropdown-item" href="#">Zéro python</a></li>
+                </ul>
+                <li><a class="dropdown-item" href="#">Espèces nuisiles</a></li>
+                <ul>
+                  <li><a class="dropdown-item" href="#">Frelon asiatiques</a></li>
+                  <li><a class="dropdown-item" href="#">Plantes exotiques envahissantes</a></li>
+                </ul>
+            </div>
+          </li>
+          <!-- Tourisme Patrimoine Nature end -->
+
+          <!-- Tourisme Patrimoine Nature -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Informations Pratiques
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Déchets et ordures ménagères</a>
+              <a class="dropdown-item" href="#">Entretien voies et trottoir</a>
+              <a class="dropdown-item" href="#">Nuissances sonores</a>
+              <a class="dropdown-item" href="#">Qualité eau potable</a>
+              <a class="dropdown-item" href="#">Guide des professionnels</a>
+              <a class="dropdown-item" href="#">Guide des associations</a>
+              <a class="dropdown-item" href="#">Location de salles municipales</a>
+              <a class="dropdown-item" href="#">Carnet d'adresse</a>
+              <a class="dropdown-item" href="#">Liens utiles</a>
+              <a class="dropdown-item" href="#">Publications utiles</a>
+              <a class="dropdown-item" href="#">Marchés</a>
+              <a class="dropdown-item" href="#">Chiens perdus</a>
+              <a class="dropdown-item" href="#">Solidarité Ukraine</a>
+            </div>
+          </li>
+          <!-- Tourisme Patrimoine Nature end -->
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="https://www.youtube.com/watch?v=iik25wqIuFo" tabindex="-1"
+              aria-disabled="true">Festival</a>
+          </li>
+        </ul>
+    </nav>
+
+    <h1 class="display-4 title">Bienvenue sur le site de Criel-sur-mer</h1>
+
+    <div id="informations" class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm text-center grow">
+          Les informations importantes:
+        </div>
+        <div class="col-sm text-center grow">
+          One of three columns
+        </div>
+        <div class="col-sm text-center grow">
+          En un clic !
+
+          <div class="row">
+            <div class="col-sm text-center shortcut-div">
+              <button class="shortcut"><i class="fa fa-home"></i><br>
+                <p>Urbanisme</p>
+              </button>
+            </div>
+            <div class="col-sm text-center shortcut-div">
+              <button class="shortcut"><i class="fa fa-trash"></i><br>
+                <p>Ordures et déchets</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm text-center shortcut-div">
+              <button class="shortcut"><i class="fa fa-pagelines"></i><br>
+                <p>Formalités Administratives</p>
+              </button>
+            </div>
+            <div class="col-sm text-center shortcut-div">
+              <button class="shortcut"><i class="fa fa-pagelines"></i><br>
+                <p>Atlas Biodiversité</p>
+              </button>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
+  </div>
 
-    
-    
 
-    <video autoplay loop id="video-background" class="out" muted plays-inline>
-      <source src="assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
-      <img src="https://c8.alamy.com/compfr/2jbtc4c/france-seine-maritime-cote-d-albatre-criel-sur-mer-vue-aerienne-2jbtc4c.jpg" title="Your browser does not support the <video> tag"/>
-    </video>
 
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+
+
+  <video autoplay loop id="video-background" class="out" muted plays-inline>
+    <source src="assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
+    <img
+      src="https://c8.alamy.com/compfr/2jbtc4c/france-seine-maritime-cote-d-albatre-criel-sur-mer-vue-aerienne-2jbtc4c.jpg"
+      title="Your browser does not support the <video> tag" />
+  </video>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
