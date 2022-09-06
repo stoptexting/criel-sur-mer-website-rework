@@ -14,7 +14,7 @@ $( document ).ready(function() {
   
 
   var typed = new Typed('#typed',{
-    strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Alors, vous venez ?"],
+    strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Qu'attendez vous?"],
     backSpeed: 40,
     typeSpeed: 40
   });
