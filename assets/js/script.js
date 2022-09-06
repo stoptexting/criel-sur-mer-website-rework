@@ -16,8 +16,6 @@ $( document ).ready(function() {
     const main = document.getElementById('main_page');
     main.style.display = "none";
   
-    
-  
     var typed = new Typed('#typed',{
       strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Qu'attendez vous?"],
       backSpeed: 40,
