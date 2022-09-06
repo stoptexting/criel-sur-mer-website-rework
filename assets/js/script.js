@@ -1,7 +1,16 @@
+$( window ).on( "load", function() {
+  const video = document.getElementById('video-background');
+  $('video-background').fadeIn("slow");
+});
+
 $( document ).ready(function() {
   $('body').css("overflow", "auto");
-  const video = document.getElementById('video-background');
-  video.currentTime += 5;
+
+  
+  const main = document.getElementById('main_page');
+  main.style.display = "none";
+
+  
 
   var typed = new Typed('#typed',{
     strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Alors, vous venez ?"],
@@ -12,13 +21,13 @@ $( document ).ready(function() {
 
 function init() {
 
-  document.getElementById("#navigando arrow").className = 'arrow_down animate__animated animate__flash';
+  document.getElementById("arrow").className = 'arrow_down animate__animated animate__flash';
   setTimeout(function () {
       
       $( "#arrow" ).fadeOut( "slow", function() {});
+      $( "#visit" ).fadeOut( "slow", function() {});
+      $('#main_page').fadeIn("slow");
 
-      $("#video-background").css({"overflow-y":"scroll"});
-      console.log("lol")
-  }, 1000); 
+  }, 1500); 
   
 }
