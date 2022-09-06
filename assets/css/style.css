@@ -70,7 +70,7 @@ h1 {
 #typed {font-size: 5vw}
 
 #main_page {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(0, 0, 0, 0.56);
   width: auto;
   height: 80%;
 }
@@ -78,4 +78,11 @@ h1 {
 #navigando {
   width: 100%;
   border-radius: 15px 15px 0px 0px;
+}
+
+#main_page {
+  border-radius: 15px 15px 0px 0px;
+  padding: 0;
+  margin-left: 2%;
+  margin-right: 2%;
 }
