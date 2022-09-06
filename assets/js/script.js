@@ -2,6 +2,7 @@ $( window ).on( "load", function() {
   $('video-background').fadeIn("slow");
   const video = document.getElementById('video-background');
   video.currentTime += 6;
+  console.log("lol")
 });
 
 function CheckSlugValidity(slug){
