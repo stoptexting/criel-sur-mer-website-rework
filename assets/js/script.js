@@ -1,10 +1,11 @@
 $( window ).on( "load", function() {
-  const video = document.getElementById('video-background');
   $('video-background').fadeIn("slow");
+  const video = document.getElementById('video-background');
+  video.currentTime += 6;
 });
 
 $( document ).ready(function() {
-  $('body').css("overflow", "auto");
+  $('body').css("overflow", "hidden");
 
   
   const main = document.getElementById('main_page');
@@ -27,6 +28,7 @@ function init() {
       $( "#arrow" ).fadeOut( "slow", function() {});
       $( "#visit" ).fadeOut( "slow", function() {});
       $('#main_page').fadeIn("slow");
+      $('body').css("overflow", "auto");
 
   }, 1500); 
   
