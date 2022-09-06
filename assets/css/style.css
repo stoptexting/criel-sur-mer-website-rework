@@ -33,11 +33,6 @@ h1 {
     
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-  
-
   .overlay {
     position: fixed;
     display: block;
@@ -63,7 +58,7 @@ h1 {
 	box-sizing: border-box;
 }
 
-#arrow_down {
+.arrow_down {
     margin-top: 25%;
     height: 4vw; 
     position: fixed;
@@ -73,3 +68,9 @@ h1 {
 .grow:hover { transform: scale(1.1); }
 
 #typed {font-size: 5vw}
+
+#main_page {
+  background-color: rgba(0, 0, 0, 0.06);
+  width: auto;
+  height: 80%;
+}

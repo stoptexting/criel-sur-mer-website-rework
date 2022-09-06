@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $('body').css("overflow", "hidden");
+  $('body').css("overflow", "auto");
   const video = document.getElementById('video-background');
   video.currentTime += 5;
 
@@ -10,41 +10,15 @@ $( document ).ready(function() {
   });
 });
 
-// thanks to https://jsfiddle.net/rjSfP/
-window.smoothScroll = function(target) {
-  var scrollContainer = target;
-  do { //find scroll container
-      scrollContainer = scrollContainer.parentNode;
-      if (!scrollContainer) return;
-      scrollContainer.scrollTop += 1;
-  } while (scrollContainer.scrollTop == 0);
-  
-  var targetY = 0;
-  do { //find the top of target relatively to the container
-      if (target == scrollContainer) break;
-      targetY += target.offsetTop;
-  } while (target = target.offsetParent);
-  
-  scroll = function(c, a, b, i) {
-      i++; if (i > 30) return;
-      c.scrollTop = a + (b - a) / 30 * i;
-      setTimeout(function(){ scroll(c, a, b, i); }, 20);
-  }
-  // start scrolling
-  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
-
-var scroll = new SmoothScroll('a[href*="#"]');
-
 function init() {
 
-  document.getElementById("arrow_down").className = 'animate__animated animate__flash';
+  document.getElementById("#navigando arrow").className = 'arrow_down animate__animated animate__flash';
   setTimeout(function () {
       
-      $( "#arrow_down" ).fadeOut( "slow", function() {});
-      smoothScroll(document.getElementById('navigando'));
+      $( "#arrow" ).fadeOut( "slow", function() {});
+
       $("#video-background").css({"overflow-y":"scroll"});
       console.log("lol")
-  }, 2500); 
+  }, 1000); 
   
 }
