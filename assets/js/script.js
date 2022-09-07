@@ -2,11 +2,10 @@ $( window ).on( "load", function() {
   $('video-background').fadeIn("slow");
   const video = document.getElementById('video-background');
   video.currentTime += 6;
-  console.log("lol")
 });
 
 function CheckSlugValidity(slug){
-  console.log("mdr");
+  console.log(window.location.pathname);
   return window.location.pathname.includes(slug);
 }
 
@@ -14,10 +13,8 @@ function CheckSlugValidity(slug){
 
 $( document ).ready(function() {
   $('body').css("overflow", "hidden");
-  console.log("ptdr");
   
-  if ((CheckSlugValidity("/") || CheckSlugValidity("/index.html"))) {
-    console.log("mdr");
+  if (window.location.pathname === "/" || CheckSlugValidity("/index.html")) {
     const main = document.getElementById('main_page');
     main.style.display = "none";
     
@@ -36,6 +33,11 @@ $( document ).ready(function() {
   }
   
 });
+
+setTimeout(function () {
+  init()
+
+}, 120000); 
 
 function init() {
 
