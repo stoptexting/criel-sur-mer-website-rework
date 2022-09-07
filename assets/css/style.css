@@ -155,7 +155,7 @@ h1 {
 }
 
 .typed-cursor{
-  font-size: 6vh;
+  font-size: 5vh;
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
