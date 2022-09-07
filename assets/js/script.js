@@ -4,6 +4,10 @@ $( window ).on( "load", function() {
   video.currentTime += 6;
 });
 
+$(document).ready(function() {
+  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 5000;  // 2 seconds
+});
+
 function CheckSlugValidity(slug){
   console.log(window.location.pathname);
   return window.location.pathname.includes(slug);
