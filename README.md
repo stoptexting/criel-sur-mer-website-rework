@@ -11,3 +11,4 @@ TODO soon ASAP:
 
 - Page principale
 ![mvp](https://user-images.githubusercontent.com/87366457/188466098-59ff541d-f8ed-4712-8ca3-ef7059a91eb0.png)
+[Argumentaire_choix_du_site.docx](https://github.com/stopsimping/criel-sur-mer-website-rework/files/9523895/Argumentaire_choix_du_site.docx)
