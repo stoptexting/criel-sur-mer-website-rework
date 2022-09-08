@@ -1,13 +1,195 @@
-.center {
-    display: flex;
-    justify-content: center;
-}
+body {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    background: #333;
+    background-attachment: fixed;
+    background-size: cover;
+  } 
 
-.caption-text {
-   background-color: rgba(110, 110, 110, 0.603);
-}
-
-.navbar-nav > li{
-    margin-left:10px;
-    margin-right:10px;
+  html {
+    font-family: 'Roboto Mono', monospace;
   }
+
+/* The only rule that matters */
+#video-background {
+/*  making the video fullscreen  */
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    visibility: visible;
+}
+
+h1 {
+    font-family: 'Syncopate', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 3vw;
+    text-align: center;
+    
+  }
+
+  .overlay {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51, 51, 51, 0.63);
+    z-index: 2;
+  }
+
+  section {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.226);
+  }
+
+* {
+	box-sizing: border-box;
+}
+
+.arrow_down {
+    margin-top: 25%;
+    height: 4vw; 
+    position: absolute;
+    filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.15); }
+
+#typed {font-size: 5vw}
+
+#navigando {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+#main_page {
+  width: auto;
+  height: 100%;
+  position: relative;
+  border-radius: 15px 15px 15px 15px;
+  padding: 0;
+  margin: 5vh;
+  display: none;
+}
+
+#visit {
+  z-index: 10;
+  display: flex;
+}
+
+.navbar-nav > li > .dropdown-menu { background-color: #e3f2fe; }
+
+.dropdown-item:hover { background-color: #1d99ff; }
+
+.title {
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97999px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.51361px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+  font-size: 130%;
+  margin: 1.5%;
+}
+
+.shortcut {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.col-sm {
+  border-style: dotted;
+  border: solid;
+  border-color: black;
+  margin: .5vw;
+  min-height: 30vh;
+  background-color: rgba(255, 255, 255, 0.596);
+  z-index: 1;
+  position: relative;
+}
+
+.col-sm:hover {
+  -webkit-box-shadow: -5px 7px 0px 1px #000000; 
+  box-shadow: -5px 7px 0px 1px #000000;
+  background-color: #e3f2fe;
+  z-index: 5;
+}
+
+.row {
+  margin: 0.5vw;
+}
+
+.shortcut-div{
+  padding: 0;
+  height: 64px;
+  width: 64px;
+}
+
+.shortcut > i {
+  font-size: 2vw;
+}
+
+@media all and (max-width:30em){
+  .shortcut{
+  display:block;
+  margin:0.4em auto;
+  }
+}
+
+#informations {
+  padding-bottom: 15px;
+}
+
+.typed-cursor{
+  font-size: 5vh;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+.col-sm > p {
+  margin-top: 2%;
+  font-size: 4vh;
+  text-shadow: 2px 1px 1px #000000;
+  color: white;
+}
+
+.card {
+  background-color: #e3f2fe;
+  z-index: 10;
+}
+
+.infos {
+  width: 75%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.card:hover {
+  -webkit-box-shadow: -5px 7px 0px 1px #000000; 
+  box-shadow: -5px 7px 0px 1px #000000;
+  background-color: #e3f2fe;
+  z-index: 5;
+}
