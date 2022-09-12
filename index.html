@@ -2,104 +2,227 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="./assets/others/favicon.ico" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accueil</title>
+  <link rel="icon" href="/assets/others/favicon.ico" />
+  <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/nav.css"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
 
-  <section id="visit">
-    <div id="typed-strings">
-      <span id="typed"></span>
+  
+
+
+
+
+  <!--
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://images.ctfassets.net/yqwtwibiobs4/7n1OUByKwzzxydau88ligE/b61dde05e73b1d25313774e4b7557556/shutterstock_505405807-small-1.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://images.yourstory.com/cs/121/a09f22505c6411ea9c48a10bad99c62f/Imagek4ec-1662134758727.jpg?fm=auto&ar=2:1&mode=crop&crop=faces"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLPBHiY4KnCnObT3TiJP496eVy__ae711P-A&usqp=CAU"
+          class="d-block w-100" alt="...">
+      </div>
     </div>
-    <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando"
-      src="./assets/others/arrow_down.svg" onclick="init()" alt="arrow_down" /></a>
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+   carousel end section -->
 
-  <div id="main_page" class="container-fluid" style="background-color: rgba(227, 242, 254, 0.281);">
-    <nav id="navigando" class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fe;">
-      <img src="./assets/others/criel_logo.png">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- navbar section -->
+  <header class="nav-header">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Accueil <span class="sr-only">(vous êtes ici)</span></a>
-          </li>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/others/criel_logo.png">
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Acceuil
+          </a>
 
-          <!-- Municipalité -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+          <div class="v-separator"></div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
               Municipalité
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Conseil municipal</a>
-              <a class="dropdown-item" href="#">Compte rendus conseil municipal</a>
-              <a class="dropdown-item" href="#">Services Municipaux</a>
-              <a class="dropdown-item" href="#">Marchés publics</a>
-              <a class="dropdown-item" href="#">Bulletin municipal</a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="#">Conseil municipal</a>
+              <a class="navbar-item" href="#"> Compte rendus conseil municipal </a>
+              <a class="navbar-item" href="#"> Services Municipaux </a>
+              <a class="navbar-item" href="#"> Marché publique </a>
+              <a class="navbar-item" href="#"> Bulletin municipal </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                a sup
+              </a>
             </div>
-          </li>
-          <!-- Municipalité end -->
-
-          <!-- Service Administratif -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            
+          </div>   
+          <div class="v-separator"></div>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
               Service Administratif
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Urbanisme</a>
-              <a class="dropdown-item" href="#">CCAS</a>
-              <a class="dropdown-item" href="#">Enfance vie-scolaire</a>
-              <a class="dropdown-item" href="#">Médiatheque</a>
-              <a class="dropdown-item" href="etat-civil.html">Etat civil</a>
-              <a class="dropdown-item" href="#">Démarches en ligne</a>
-              <a class="dropdown-item" href="#">Offre d'emploi</a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
             </div>
-          </li>
-          <!-- Service Administratif end -->
+          </div>
 
-          <!-- Tourisme Patrimoine Nature -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Tourisme Patrimoine Nature
+          <div class="v-separator"></div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Tourisme, Patrimoine, Nature
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Office de tourisme</a>
-              <a class="dropdown-item" href="#">Hébergement chantereine</a>
-              <a class="dropdown-item" href="#">Camping</a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+
+          <div class="v-separator"></div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Informations Pratiques
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+
+          
+      </div>
+  
+      </div>
+    </nav>
+    <nav class="nav-top toggle-content">
+      <ul class="menu">
+        <li><a href="#" class="section-title active">Acceuil</a>
+        </li>
+        <li><a class="section-title" href="" title="placeholder"></a>
+          <label for="submenu-toggle-municipalite" class="section-title">Municipalité</label>
+          <input type="checkbox" name="submenu" id="submenu-toggle-municipalite" class="submenu-toggle toggle-checkbox">
+          <ul class="submenu toggle-content">
+            <li><a class="" href="#">Conseil municipal</a></li>
+            <li><a class="" href="#">Compte rendus conseil municipal</a></li>
+            <li><a class="" href="#">Services Municipaux</a></li>
+            <li><a class="" href="#">Marchés publics</a></li>
+            <li><a class="" href="#">Bulletin municipal</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="section-title" href="" title="placeholder"></a>
+          <label for="submenu-toggle-admin" class="section-title">Service Administratif</label>
+          <input type="checkbox" name="submenu" id="submenu-toggle-admin" class="submenu-toggle toggle-checkbox">
+          <ul class="submenu toggle-content">
+            <li><a class="" href="#">Urbanisme</a></li>
+            <li><a class="" href="#">CCAS</a></li>
+            <li><a class="" href="#">Enfance vie-scolaire</a></li>
+            <li><a class="" href="#">Médiatheque</a></li>
+            <li><a class="" href="etat-civil.html">Etat civil</a></li>
+            <li><a class="" href="#">Démarches en ligne</a></li>
+            <li><a class="" href="#">Offre d'emploi</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="submenu-toggle-patrimoine" class="section-title">Tourisme, Patrimoine, Nature</label>
+          <input type="checkbox" name="submenu" id="submenu-toggle-patrimoine" class="submenu-toggle toggle-checkbox">
+          <ul class="submenu toggle-content">
+            <li><a class="" href="#">Office de tourisme</a></li>
+            <li><a class="" href="#">Hébergement chantereine</a></li>
+            <li>
+              <a class="" href="#">Camping</a>
               <ul>
                 <li><a class="dropdown-item" href="#">Camping le mont joli bois</a></li>
                 <li><a class="dropdown-item" href="#">Aires de camping car</a></li>
               </ul>
-              <a class="dropdown-item" href="#">Plage</a>
+            </li>
+            <li>
+              <a class="" href="#">Plage</a>
               <ul>
                 <li><a class="dropdown-item" href="#">Eaux de baignade</a></li>
                 <li><a class="dropdown-item" href="#">Cabines de plages</a></li>
               </ul>
-              <a class="dropdown-item" href="#">Visites et patrimoine</a>
-              <a class="dropdown-item" href="#">Nature</a>
+            </li>
+            <li><a class="" href="#">Visites et patrimoine</a></li>
+            <li>
+              <a class="" href="#">Nature</a>
               <ul>
                 <li><a class="dropdown-item" href="#">Biodiversité</a></li>
                 <ul>
@@ -111,204 +234,67 @@
                   <li><a class="dropdown-item" href="#">Frelon asiatiques</a></li>
                   <li><a class="dropdown-item" href="#">Plantes exotiques envahissantes</a></li>
                 </ul>
-            </div>
-          </li>
-          <!-- Tourisme Patrimoine Nature end -->
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label for="submenu-toggle-infos" class="section-title">Informations Pratiques</label>
+          <input type="checkbox" name="submenu" id="submenu-toggle-infos" class="submenu-toggle toggle-checkbox">
+          <ul class="submenu toggle-content">
+            <li> <a class="" href="dechets-et-ordures-menageres.html">Déchets et ordures ménagères</a></li>
+            <li><a class="" href="#">Entretien voies et trottoir</a></li>
+            <li><a class="" href="#">Nuissances sonores</a></li>
+            <li><a class="" href="#">Qualité eau potable</a></li>
+            <li><a class="" href="#">Guide des professionnels</a></li>
+            <li><a class="" href="#">Guide des associations</a></li>
+            <li><a class="" href="#">Location de salles municipales</a></li>
+            <li><a class="" href="#">Carnet d'adresse</a></li>
+            <li><a class="" href="#">Liens utiles</a></li>
+            <li><a class="" href="#">Publications utiles</a></li>
+            <li><a class="" href="#">Marchés</a></li>
+            <li><a class="" href="#">Chiens perdus</a></li>
+            <li><a class="" href="#">Solidarité Ukraine</a></li>
+          </ul>
 
-          <!-- Tourisme Patrimoine Nature -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Informations Pratiques
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="dechets-et-ordures-menageres.html">Déchets et ordures ménagères</a>
-              <a class="dropdown-item" href="#">Entretien voies et trottoir</a>
-              <a class="dropdown-item" href="#">Nuissances sonores</a>
-              <a class="dropdown-item" href="#">Qualité eau potable</a>
-              <a class="dropdown-item" href="#">Guide des professionnels</a>
-              <a class="dropdown-item" href="#">Guide des associations</a>
-              <a class="dropdown-item" href="#">Location de salles municipales</a>
-              <a class="dropdown-item" href="#">Carnet d'adresse</a>
-              <a class="dropdown-item" href="#">Liens utiles</a>
-              <a class="dropdown-item" href="#">Publications utiles</a>
-              <a class="dropdown-item" href="#">Marchés</a>
-              <a class="dropdown-item" href="#">Chiens perdus</a>
-              <a class="dropdown-item" href="#">Solidarité Ukraine</a>
-            </div>
-          </li>
-          <!-- Tourisme Patrimoine Nature end -->
-
-          <li class="nav-item">
-            <a class="nav-link disabled" href="https://www.youtube.com/watch?v=iik25wqIuFo" tabindex="-1"
-              aria-disabled="true">Festival</a>
-          </li>
-        </ul>
+        </li>
+        <li>
+      </ul>
     </nav>
+    <label for="nav-toggle" class="nav-toggle-label ">
+      <span>
+      </span>
+    </label>
+  </header>
+  <!-- navbar end section -->
 
-    <h1 class="display-4 title">Bienvenue sur le site de Criel-sur-mer</h1>
+  <div class="main-content grid-container">
 
-    <div id="informations" class="container-fluid">
-
-      <div class="row">
-        <div class="col-sm text-center grow">
-          <p>Actualité : </p>
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card mx-auto" style="width: 18rem;">
-                  <img class="card-img-top" src="./assets/others/assos.jpg" alt="Forum associations">
-                  <div class="card-body">
-                    <h5 class="card-title">FORUM ASSOCIATIF</h5>
-                    <p class="card-text">Le Forum associatif annuel aura le le 17 Septembre de 14h à 18h dans la salle des sports au Chateau de Chantereine</p>
-                    <a href="#" class="btn btn-primary">En savoir +</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card mx-auto" style="width: 18rem;">
-                  <img class="card-img-top" src="./assets/others/deviation.jpg" alt="Deviation">
-                  <div class="card-body">
-                    <h5 class="card-title">TRAVAUX DE REFECTION</h5>
-                    <p class="card-text">Ces travaux seront réalisés dans les nuits du 12 au 15 septembre 2022 (3 nuits). Circulation interrompue 20h00-06h00.</p>
-                    <a href="#" class="btn btn-primary">En savoir +</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card mx-auto" style="width: 18rem;">
-                  <img class="card-img-top" src="./assets/others/sauveteurs.jpg" alt="Sauveteurs">
-                  <div class="card-body">
-                    <h5 class="card-title">MERCI AUX SAUVETEURS</h5>
-                    <p class="card-text">Ce samedi 6 août, début d'après-midi, sur la plage de Mesnil-Val à Criel sur Mer, un touriste fait un arrêt cardiaque. </p>
-                    <a href="#" class="btn btn-primary">En savoir +</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-        </div>
-        <div class="col-sm text-center grow">
-          <p>One of three columns</p>
-        </div>
-        <div class="col-sm text-center grow">
-          <p style="margin-top: 2%;">En un clic !</p>
-          <div class="row">
-            <div class="col-sm text-center shortcut-div">
-              <button class="shortcut"><i class="fa fa-home"></i><br>
-                <p>Urbanisme</p>
-              </button>
-            </div>
-            <div class="col-sm text-center shortcut-div">
-              <button class="shortcut" onclick="window.location.href='./dechets-et-ordures-menageres.html'"><i class="fa fa-trash"></i><br>
-                <p>Ordures <br>et déchets</p>
-              </button>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm text-center shortcut-div">
-              <button class="shortcut" onclick="window.location.href='./etat-civil.html'"><i class="fa fa-user"></i><br>
-                <p>Formalités Administratives</p>
-              </button>
-            </div>
-            <div class="col-sm text-center shortcut-div">
-              <button class="shortcut"><i class="fa fa-pagelines"></i><br>
-                <p>Atlas <br>Biodiversité</p>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h1 class="display-4 title">Retrouvez nous ici :</h1>
-
-      <div class="container infos">
-        <div class="row">
-          <div class="col-12 text-center shortcut-div">
-            <div class="card-deck">
-              <div class="card grow">
-                <img class="card-img-top" src="./assets/others/mairie.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Mairie de Criel</h5>
-                  <p class="card-text">
-                    Mairie de Criel sur Mer (Manoir de Briançon)
-                    76910 Criel sur Mer
-                    Tél : 02.35.50.51.20
-                    Fax : 02.35.50.22.37
-                    Email : mairie@criel-sur-mer.fr
-                    Ouvert : du lundi au vendredi
-                    de 9h00 à 12h00 et de 13h30 à 17h00
-                    Le samedi
-                     de 10h à 12h (du 10/07 au 25/09/21)
-                    </p>
-                  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 7 jours</small></p>
-                </div>
-              </div>
-              <div class="card grow">
-                <img class="card-img-top" src="./assets/others/mairie_annexe.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Mairie annexe</h5>
-                  <p class="card-text">
-                    Mairie annexe de Criel sur Mer
-                    (Mesnil Val)
-                    Tél : 02.35.50.15.62   
-                    Email : mairie@criel-sur-mer.fr
-                    Permanence :
-                    Tous les vendredis de 10h à 12h</p>
-                  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 2 minutes</small></p>
-                </div>
-              </div>
-              <div class="card grow">
-                <img class="card-img-top" src="./assets/others/officetourisme.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">L'Office de Tourisme</h5>
-                  <p class="card-text">
-                    L'Office de Tourisme
-                    60 rue Libération
-                    76910 Criel sur Mer
-                    Tél : 02.35.86.05.69
-                    Site internet :
-                    www.destination-letreport-mers.fr</p>
-                  <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 8 mois</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="en-un-clic grid-container grid-item">
+      <a href="" class="clic-item grid-item"><i class="fa fa-home clic-icon"></i><br>Urbanisme</a>
+      <a href="" class="clic-item grid-item"><i class="fa fa-home clic-icon"></i><br>Ordures et déchets</a>
+      <a href="" class="clic-item grid-item"><i class="fa fa-home clic-icon"></i><br>Formalités Administratives</a>
+      <a href="" class="clic-item grid-item"><i class="fa fa-home clic-icon"></i><br>Atlas Biodiversité</a>
     </div>
+    <div class="en-un-clic grid-container grid-item">
+      <a href="" class="clic-item"><i class="fa fa-home clic-icon"></i></a>
+      <a href="" class="clic-item"></a>
+      <a href="" class="clic-item"></a>
+      <a href="" class="clic-item"></a>
+    </div>
+
+    <!--  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>-->
   </div>
 
   <video autoplay loop id="video-background" class="out" muted plays-inline>
-    <source src="./assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
+    <source src="./assets/others/criel-sur-mer-background.mp4#t=10" type="video/mp4" type="video/mp4">
     <img
       src="https://c8.alamy.com/compfr/2jbtc4c/france-seine-maritime-cote-d-albatre-criel-sur-mer-vue-aerienne-2jbtc4c.jpg"
       title="Your browser does not support the videoplayback tag" />
   </video>
 
-  <script src="https://code.jquery.com/jquery-3.6.1.js" defer="defer"></script>
-  
-  <script src="./assets/js/smooth-scroll.polyfills.js" defer="defer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" defer="defer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" defer="defer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous" defer="defer"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous" defer="defer"></script>
-    <script src="./assets/js/script.js" defer="defer"></script>
-    
 </body>
 
 </html>
