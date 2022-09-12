@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* LOADING SCREEN DON'T TOUCH BELOW */
 body {
     height: 80%;
@@ -91,3 +95,8 @@ h1 {
   text-align: center;
   
 }
+
+@media screen and (max-device-width: 800px) {
+  html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+  }
