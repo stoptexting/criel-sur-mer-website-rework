@@ -1,3 +1,4 @@
+/* LOADING SCREEN DON'T TOUCH BELOW */
 body {
     height: 80%;
     margin: 0;
@@ -24,27 +25,6 @@ body {
     filter: blur(5px);
     visibility: visible;
 }
-
-h1 {
-    font-family: 'Syncopate', sans-serif;
-    color: white;
-    text-transform: uppercase;
-    line-height: 1.2;
-    font-size: 3vw;
-    text-align: center;
-    
-  }
-
-  .overlay {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(51, 51, 51, 0.63);
-    z-index: 2;
-  }
 
   section {
     color: #fff;
@@ -75,7 +55,7 @@ h1 {
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.15); }
 
-#typed {font-size: 5vw; min-height: 2vw;}
+#typed {font-size: calc(10px + 5vw); ;}
 
 #main_page {
   width: auto;
@@ -92,10 +72,6 @@ h1 {
   display: flex;
 }
 
-#informations {
-  padding-bottom: 15px;
-}
-
 .typed-cursor{
   font-size: 5vh;
   opacity: 1;
@@ -104,27 +80,14 @@ h1 {
   animation: blink 0.7s infinite;
 }
 
-.col-sm > p {
-  margin-top: 2%;
-  font-size: 4vh;
-  text-shadow: 2px 1px 1px #000000;
+/* LOADING SCREEN DON'T TOUCH ABOVE */
+
+h1 {
+  font-family: 'Syncopate', sans-serif;
   color: white;
-}
-
-.card {
-  background-color: #e3f2fe;
-  z-index: 10;
-}
-
-.infos {
-  width: 75%;
-  height: 80%;
-  object-fit: cover;
-}
-
-.card:hover {
-  -webkit-box-shadow: -5px 7px 0px 1px #000000; 
-  box-shadow: -5px 7px 0px 1px #000000;
-  background-color: #e3f2fe;
-  z-index: 5;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  
 }
