@@ -40,7 +40,6 @@ $( document ).ready(function() {
 
 setTimeout(function () {
   init()
-
 }, 120000); 
 
 function init() {
@@ -48,10 +47,13 @@ function init() {
   document.getElementById("arrow").className = 'arrow_down animate__animated animate__flash';
   setTimeout(function () {
       
-      $( "#arrow" ).fadeOut( "slow", function() {});
-      $( "#visit" ).fadeOut( "slow", function() {});
-      $('#main_page').fadeIn("slow");
-      $('body').css("overflow", "auto");
+    $("#arrow").fadeOut("slow");
+    $("#visit").fadeOut("slow", function(){
+      $("#main_page").fadeIn("slow", function() {
+        $('body').css("overflow", "auto");
+      });
+  });
+      
 
   }, 1500); 
   
