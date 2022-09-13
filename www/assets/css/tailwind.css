@@ -2598,17 +2598,50 @@ body {
   background: rgba(255, 0, 0, 0.3);
   border: 2px solid grey;
   display: grid;
-  grid-template-columns: 9fr 1fr;
+  grid-template-columns: 5fr 1fr;
   transition: all 1s;
 }
 
-#article {
+#articles {
   border: 2px solid white;
   background: rgba(255, 255, 255, 0.3);
   align-items: center;
 }
 
-@media (max-width: 499.99px) { /* screen width (or the .grid) needs to be at least 500px wide, in order to display the .sidebar, because min-width of 200px is exactly 40% of 500px, so display it when 500px and more, but hide it when less */
-  .grid {grid-template-columns: 10fr}
-  #sidebar {display: none}
+#sidebar {border: 2px solid white;
+  background: rgba(255, 255, 255, 0.3);
+  width: 10vw;
+  height: 20vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2vh;
+  margin-top: 2vh;
+}
+
+@media (max-width: 1170px) {
+  #enunclic {display: none;}
+}
+
+
+
+
+@media (max-width: 499.99px) {
+  .grid {grid-template-columns: 15fr 1fr}
+  
+  #sidebar {border: 2px solid white;
+            background: rgba(255, 255, 255, 0.3);
+            width: 10vw;
+            height: 20vh;
+            position: -webkit-sticky;
+            position: sticky;
+  }
+}
+
+@media (max-height: 7vh) {
+  #sidebar {display: none;}
+}
+
+article {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
 }
