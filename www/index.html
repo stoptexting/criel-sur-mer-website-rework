@@ -41,8 +41,8 @@
         left-0
         z-40
         w-full
-        flex
         items-center
+        block
       "
     >
       <div class="container">
@@ -324,6 +324,57 @@
           </div>
         </div>
       </div>
+
+      <div id="page" class="container">
+        <div id="articles" class="container flex justify-center">
+            <!-- Column -->
+          <div class="my-1 mx-80 px-1 w-full md:w-1/2 lg:mx-12 lg:px-12 lg:w-1/2">
+
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                <a href="#">
+                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+                </a>
+
+                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                    <h1 class="text-lg">
+                        <a class="no-underline hover:underline text-black" href="#">
+                            Article Title
+                        </a>
+                    </h1>
+                    <p class="text-grey-darker text-sm">
+                        14/4/19
+                    </p>
+                </header>
+
+                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
+                        <p class="ml-2 text-sm">
+                            Author Name
+                        </p>
+                    </a>
+                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                        <span class="hidden">Like</span>
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </footer>
+
+            </article>
+            <!-- END Article -->
+
+        </div>
+      <!-- END Column -->
+        </div>
+
+        <div id="sidebar" class=" container">
+          <div class="border-solid">
+              dfdfgsdfdfg
+          </div>
+        </div>
+
+      </div>
     </div>
     <!-- ====== Navbar Section End -->
 
@@ -353,34 +404,34 @@
         });
       });
 
-      // section menu active
-      function onScroll(event) {
-        const sections = document.querySelectorAll(".ud-menu-scroll");
-        const scrollPos =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop;
+      // // section menu active
+      // function onScroll(event) {
+      //   const sections = document.querySelectorAll(".ud-menu-scroll");
+      //   const scrollPos =
+      //     window.pageYOffset ||
+      //     document.documentElement.scrollTop ||
+      //     document.body.scrollTop;
 
-        for (let i = 0; i < sections.length; i++) {
-          const currLink = sections[i];
-          const val = currLink.getAttribute("href");
-          const refElement = document.querySelector(val);
-          const scrollTopMinus = scrollPos + 73;
-          if (
-            refElement.offsetTop <= scrollTopMinus &&
-            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-          ) {
-            document
-              .querySelector(".ud-menu-scroll")
-              .classList.remove("active");
-            currLink.classList.add("active");
-          } else {
-            currLink.classList.remove("active");
-          }
-        }
-      }
+      //   for (let i = 0; i < sections.length; i++) {
+      //     const currLink = sections[i];
+      //     const val = currLink.getAttribute("href");
+      //     const refElement = document.querySelector(val);
+      //     const scrollTopMinus = scrollPos + 73;
+      //     if (
+      //       refElement.offsetTop <= scrollTopMinus &&
+      //       refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+      //     ) {
+      //       document
+      //         .querySelector(".ud-menu-scroll")
+      //         .classList.remove("active");
+      //       currLink.classList.add("active");
+      //     } else {
+      //       currLink.classList.remove("active");
+      //     }
+      //   }
+      // }
 
-      window.document.addEventListener("scroll", onScroll);
+      // window.document.addEventListener("scroll", onScroll);
     </script>
   </body>
 </html>
