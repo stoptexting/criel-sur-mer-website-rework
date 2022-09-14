@@ -2598,7 +2598,7 @@ body {
   background: rgba(255, 0, 0, 0.3);
   border: 2px solid grey;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 1fr 15%;
   transition: all 1s;
 }
 
@@ -2616,17 +2616,34 @@ body {
   position: sticky;
   top: 2vh;
   margin-top: 2vh;
+  justify-content: center;
+  display: flex;
+  z-index: 2;
+  min-height: 7vh;
 }
 
-@media (max-width: 1170px) {
+@media (max-height: 700px) {
+  #sidebar {display: none;}
+}
+
+
+@media (max-width: 1540px) {
   #enunclic {display: none;}
+  #dechectos {display: none;}
+  #urbanisme {display: none;}
 }
 
+@media (max-width: 500px) {
+  #enunclic {display: none;}
+  #dechectos {display: none;}
+  #urbanisme {display: none;}
+  .urbanisme {display: none;}
+  .dechets {display: none;}
+  #sidebar {display: none;}
+}
 
-
-
-@media (max-width: 499.99px) {
-  .grid {grid-template-columns: 15fr 1fr}
+@media (max-width: 900px) {
+  .grid {grid-template-columns: 1fr 15%}
   
   #sidebar {border: 2px solid white;
             background: rgba(255, 255, 255, 0.3);
@@ -2636,12 +2653,26 @@ body {
             position: sticky;
   }
 }
-
+/* 
 @media (max-height: 7vh) {
   #sidebar {display: none;}
-}
+} */
 
 article {
   margin-top: 3vh;
   margin-bottom: 2vh;
+}
+
+.shortcut {
+  background-color: rgba(255, 255, 255, 0.103);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 6px;
+  margin: 8%;
+  width: 5vw;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.shortcut:hover {
+  background-color: rgba(255, 255, 255, 0.466);
 }
