@@ -2567,9 +2567,9 @@ body {
     margin: 0;
     padding: 0;
   /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
-    background: #333;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #333;
   } 
 
   section {
@@ -2595,39 +2595,43 @@ body {
 }
 
 #page {
-  background: rgba(255, 0, 0, 0.3);
-  border: 2px solid grey;
+  /* background: rgba(255, 0, 0, 0.3);
+  border: 2px solid grey; */
   display: grid;
   grid-template-columns: 1fr 15%;
   transition: all 1s;
 }
 
 #articles {
-  border: 2px solid white;
-  background: rgba(255, 255, 255, 0.3);
+  /* border: 2px solid white;
+  background: rgba(255, 255, 255, 0.3); */
   align-items: center;
 }
 
-#sidebar {border: 2px solid white;
-  background: rgba(255, 255, 255, 0.3);
-  width: 10vw;
-  height: 20vh;
+#sidebar {
+  /* border: 2px solid white; */
+  /* background: rgba(255, 255, 255, 0.3); */
+  width: auto;
+  height: auto;
   position: -webkit-sticky;
   position: sticky;
-  top: 2vh;
-  margin-top: 2vh;
+  padding-top: 5vh;
+  top: 5vh;
+  margin-top: 5vh;
   justify-content: center;
   display: flex;
   z-index: 2;
-  min-height: 7vh;
+  max-height: 35vh;
+  margin-top: 15%;
+  min-height: 25%;
 }
 
-@media (max-height: 700px) {
-  #sidebar {display: none;}
+@media only screen and (max-width: 200px) {
+  #enunclic {display: none;}
 }
 
 
-@media (max-width: 1540px) {
+/* @media (max-width: 1540px) {
   #enunclic {display: none;}
   #dechectos {display: none;}
   #urbanisme {display: none;}
@@ -2640,19 +2644,20 @@ body {
   .urbanisme {display: none;}
   .dechets {display: none;}
   #sidebar {display: none;}
-}
+} */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .grid {grid-template-columns: 1fr 15%}
   
   #sidebar {border: 2px solid white;
             background: rgba(255, 255, 255, 0.3);
-            width: 10vw;
-            height: 20vh;
+            width: auto;
+            height: auto;
             position: -webkit-sticky;
             position: sticky;
   }
-}
+} */
+
 /* 
 @media (max-height: 7vh) {
   #sidebar {display: none;}
@@ -2666,13 +2671,53 @@ article {
 .shortcut {
   background-color: rgba(255, 255, 255, 0.103);
   border: 2px solid rgb(0, 0, 0);
-  padding: 6px;
-  margin: 8%;
+  margin-bottom: 16px;
   width: 5vw;
+  min-width: 48px;
+  min-height: 48px;
   aspect-ratio: 1 / 1;
   display: block;
 }
 
-.shortcut:hover {
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.15); }
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+/* .shortcut:hover {
   background-color: rgba(255, 255, 255, 0.466);
+} */
+
+
+/* Thansk to https://codepen.io/ashalfarhan/details/BarRppB */
+.with-tooltip {
+  position: relative;
+}
+
+.with-tooltip::after {
+  content: attr(data-tooltip-content);
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  bottom: 20%;
+  right: 70%;
+  /* left: 50%; */
+  width: max-content;
+  background-color: gray;
+  opacity: 0;
+  font-size: 0.8rem;
+  visibility: hidden;
+  transform: translate(-50%, 18px) scale(0.8);
+  transition: visibility, opacity, transform 200ms;
+}
+
+.with-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
