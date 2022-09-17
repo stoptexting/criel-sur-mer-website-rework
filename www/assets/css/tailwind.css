@@ -2620,10 +2620,10 @@ body {
   margin-top: 5vh;
   justify-content: center;
   display: flex;
-  z-index: 2;
+  z-index: 0;
   max-height: 35vh;
   margin-top: 15%;
-  min-height: 25%;
+  min-height: 10%;
 }
 
 @media only screen and (max-width: 200px) {
@@ -2682,11 +2682,6 @@ article {
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.15); }
 
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
 
 /* .shortcut:hover {
   background-color: rgba(255, 255, 255, 0.466);
