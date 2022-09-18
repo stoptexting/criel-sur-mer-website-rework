@@ -2,4 +2,22 @@
 https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 # TODO LIST
-- [ ] test
+## TOP PRIORITY
+- [ ] Faire les pages / autres articles
+
+- [ ] Navbar ajouter les menus et sous menus
+![image](https://user-images.githubusercontent.com/87366457/190897928-5c162a6a-d5cf-47ec-884a-385a84b24ae5.png)
+
+- [ ] Ajouter les articles (Noms, Posté le, Auteur et mini résumé)
+![image](https://user-images.githubusercontent.com/87366457/190897950-ee8cd5bb-3200-4887-8166-bf177ffeb218.png)
+
+
+
+## After top priorities
+- [ ] Mettre lien vers articles fictif lorem ipsum lorsque clique sur article page accueil
+- [ ] Mettre lien lorsque l'on clique sur shortcut (href)
+
+## At the end / when time
+- [ ] Ajouter / retirer En un clic ! en fonction de media-type
+- [ ] Center En un clic !
+
