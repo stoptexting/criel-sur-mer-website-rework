@@ -16,6 +16,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 
 ## After top priorities
+- [ ] Ajouter camera en bas, nous contacter, adressres...
 - [ ] Mettre lien vers articles fictif lorem ipsum lorsque clique sur article page accueil
 - [ ] Mettre lien lorsque l'on clique sur shortcut (href)
 
