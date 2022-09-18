@@ -5,6 +5,8 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 ## TOP PRIORITY
 - [ ] Faire les pages / autres articles
 
+- [ ] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
+
 - [ ] Navbar ajouter les menus et sous menus
 ![image](https://user-images.githubusercontent.com/87366457/190897928-5c162a6a-d5cf-47ec-884a-385a84b24ae5.png)
 
