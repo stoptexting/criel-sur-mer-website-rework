@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-#navbar-ul{
-    margin-left: 0;
-  }
+#main{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
   
   #video-background {
     /*  making the video fullscreen  */
@@ -179,3 +183,4 @@
     opacity: 1;
     transform: translate(-50%, 0);
   }
+
