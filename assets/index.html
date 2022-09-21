@@ -27,6 +27,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" type="text/javascript"></script>
@@ -76,14 +79,149 @@
 
             <ul  class="w-full  text-lg hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-20">
               <li><a class="hover:text-[#2F489F]" href="#">Accueil</a></li>
-
-              <li><a class="hover:text-[#2F489F]" href="#">Municipalité</a></li>
-
-              <li><a class="hover:text-[#2F489F]" href="#">Services</a></li>
-
-              <li><a class="hover:text-[#2F489F]" href="#">Tourisme</a></li>
-
-              <li><a class="hover:text-[#2F489F]" href="#">Contact</a></li>
+            
+            <button type="button" data-dropdown-toggle="dropdown" class="hover:text-[#2F489F]">Municipalité<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+              <ul class="py-1" aria-labelledby="dropdown">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Conseil Municipal</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Comptes rendus Conseil Municipal</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Services Municipaux</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés publics</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bulletin Municipal</a>
+                </li>
+              </ul>
+            </div>
+           
+            <button type="button" data-dropdown-toggle="descend" class="hover:text-[#2F489F]">Services administratif<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descend">
+              <ul class="py-1" aria-labelledby="descend">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Urbanisme</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">CCAS</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Enfance-Vie Scolaire</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Médiathèque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Etat Civil</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Démarches en ligne</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offre d'emploi</a>
+                </li>
+              </ul>
+            </div>
+            
+            <button type="button" data-dropdown-toggle="descendre" class="hover:text-[#2F489F]">Tourisme Patrimoine<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descendre">
+              <ul class="py-1" aria-labelledby="descendre">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de tourisme</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Hébergement Chantereine</a>
+                </li>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Camping</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Camping Le Mont Jolis Bois</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Aires de Camping Car</a>
+                  </li>
+                </ul>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Plage</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Eaux de baignade</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Cabine de plage</a>
+                  </li>
+                </ul>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Visite et Patrimoine</a>
+                </li>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Nature</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Biodiversité</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Espèce Nuisibles</a>
+                  </li>
+                </ul>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Contact et accès</a>
+                </li>
+              </ul>
+            </div>
+           
+            <button type="button" data-dropdown-toggle="Contact" class="hover:text-[#2F489F]">Information pratique<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="Contact">
+              <ul class="py-1" aria-labelledby="Contact">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Déchets et Ordures ménageres</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Entretien voies et trottoir</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Nuissances sonores</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Qualités eau potable</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des professionnels</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des associations</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Location de Salles Municipales</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Carnet d'adresses</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Liens utiles</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Publications Utiles</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Chiens perdus</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité UKRAINE</a>
+                </li>
+              </ul>
 
             </ul>
 
