@@ -59,30 +59,32 @@
       <!--bar de navigation -->
 
 
-      <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between items-center bg-white">
-          <a class="text-6xl font-bold leading-none" href="#">
-              <!-- <img class="w-12" src="./others/logo.png"> -->
-              <img class="w-12 p-0" src="./others/logo.png">
-          </a>
+      <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
+        <!-- logo -->
 
-          <!-- Mobile -->
-          <div class="lg:hidden">
+        <a class=" leading-none" href="#">
+          <img class="w-12 p-0" src="./others/logo2.png">
+        </a>
+
+        <!-- Mobile -->
+        <div class="lg:hidden">
               <button class="navbar-burger flex items-center text-blue-600 p-3">
                   <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <title>Mobile menu</title>
                       <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                   </svg>
               </button>
-          </div>
+        </div>
 
-
-
-            <ul  class="w-full  text-lg hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-20">
-              <li><a class="hover:text-[#2F489F]" href="#">Accueil</a></li>
+        <!-- Boutons de la navabar-->
+        <ul  class="text-lg hidden flex-justify-between transform lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto  space-x-18 sm:space-x-14">
+          <li>
+            <a class="hover:text-[#2F489F]" href="#">Accueil</a>
+          </li>
             
-            <button type="button" data-dropdown-toggle="dropdown" class="hover:text-[#2F489F]">Municipalité<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
-            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
-              <ul class="py-1" aria-labelledby="dropdown">
+          <button type="button" data-dropdown-toggle="dropdown" class="hover:text-[#2F489F]">Municipalité <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+          <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+            <ul class="py-1" aria-labelledby="dropdown">
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Conseil Municipal</a>
                 </li>
@@ -98,12 +100,12 @@
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bulletin Municipal</a>
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
            
-            <button type="button" data-dropdown-toggle="descend" class="hover:text-[#2F489F]">Services administratif<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
-            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descend">
-              <ul class="py-1" aria-labelledby="descend">
+          <button type="button" data-dropdown-toggle="descend" class="hover:text-[#2F489F]">Services administratif<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+          <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descend">
+            <ul class="py-1" aria-labelledby="descend">
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Urbanisme</a>
                 </li>
@@ -125,11 +127,11 @@
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offre d'emploi</a>
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
             
-            <button type="button" data-dropdown-toggle="descendre" class="hover:text-[#2F489F]">Tourisme Patrimoine<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
-            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descendre">
+          <button type="button" data-dropdown-toggle="descendre" class="hover:text-[#2F489F] inline-block">Tourisme Patrimoine<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+          <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="descendre">
               <ul class="py-1" aria-labelledby="descendre">
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de tourisme</a>
@@ -177,11 +179,11 @@
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Contact et accès</a>
                 </li>
               </ul>
-            </div>
+          </div>
            
-            <button type="button" data-dropdown-toggle="Contact" class="hover:text-[#2F489F]">Information pratique<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
-            <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="Contact">
-              <ul class="py-1" aria-labelledby="Contact">
+          <button type="button" data-dropdown-toggle="Contact" class="hover:text-[#2F489F]">Informations pratique<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></button>
+          <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="Contact">
+            <ul class="py-1" aria-labelledby="Contact">
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Déchets et Ordures ménageres</a>
                 </li>
@@ -221,14 +223,14 @@
                 <li>
                   <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité UKRAINE</a>
                 </li>
-              </ul>
-
             </ul>
+          </div>
+        </ul>
 
-                <button type="button" class="font-light hidden lg:inline-block pl-1 pr-4 py-0 bg-[#2F489F] text-white text-sm leading-normal uppercase rounded shadow-md hover:bg-[#395AC8] hover:shadow-lg focus:bg-[#395AC8] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
-                  <img src="./others/location.svg" class="w-8 inline-block pb-1" aria-hidden="true">  
-                  venir ici
-                </button>
+        <button type="button" class="font-light hidden lg:inline-block pl-1 pr-4 py-0 bg-[#2F489F] text-white text-sm leading-normal uppercase rounded shadow-md hover:bg-[#395AC8] hover:shadow-lg focus:bg-[#395AC8] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
+          <img src="./others/location.svg" class="w-8 inline-block pb-1" aria-hidden="true">  
+            venir ici
+        </button>
 
       </nav>
 
