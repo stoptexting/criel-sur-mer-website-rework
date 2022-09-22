@@ -7,7 +7,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 - mettre les noms corrects des sections du menu
 -ajouter les animations au dessus des éléments du menu
--corriger le problème medium
+
 - s'occcuper de l'interface téléphone
 
 ## TOP PRIORITY
