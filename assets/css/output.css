@@ -4050,6 +4050,11 @@ textarea.form-control.is-invalid {
   margin-bottom: 1rem;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -4346,16 +4351,12 @@ textarea.form-control.is-invalid {
   line-height: 1.75rem;
 }
 
-.font-light {
-  font-weight: 300;
+.font-semibold {
+  font-weight: 600;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .uppercase {
@@ -4746,18 +4747,18 @@ button:hover .hover-bar {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#395AC8\]:hover {
+.hover\:bg-\[\#304C9D\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(57 90 200 / var(--tw-bg-opacity));
+  background-color: rgb(48 76 157 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#6A83D6\]\/20:hover {
   background-color: rgb(106 131 214 / 0.2);
 }
 
-.hover\:text-\[\#2F489F\]:hover {
+.hover\:text-\[\#203354\]:hover {
   --tw-text-opacity: 1;
-  color: rgb(47 72 159 / var(--tw-text-opacity));
+  color: rgb(32 51 84 / var(--tw-text-opacity));
 }
 
 .hover\:text-gray-500:hover {
