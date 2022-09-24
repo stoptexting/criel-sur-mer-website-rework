@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
     document.getElementById("video-background").currentTime += 6;
     $('body').css("overflow", "hidden");
     $('#main').css("display", "none");
@@ -8,6 +7,9 @@ $( document ).ready(function() {
         strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Qu'attendez vous ?"],
         backSpeed: 40,
         typeSpeed: 40
+      });
+      $('.close').on('click', function() {
+        $('#alert-border-2').fadeOut();
       });
     
   });
