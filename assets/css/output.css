@@ -4942,6 +4942,11 @@ textarea.form-control.is-invalid {
   fill: currentColor;
 }
 
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
+}
+
 .p-0 {
   padding: 0px;
 }
