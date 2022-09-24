@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 #main{
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Raleway', sans-serif;
 }
 
@@ -283,4 +282,11 @@ nav ul button {
 button:hover .hover-bar {
   transform: translate(0, -110%);
   /* transform: translate(0,-200%); */
+}
+
+/* Navbar */
+
+/* Navigation menu popup, large screen */
+nav ul button ~ div {
+   top: -10px !important;
 }
