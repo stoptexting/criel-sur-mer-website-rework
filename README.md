@@ -10,7 +10,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 ## TOP PRIORITY
 - [ ] Faire les pages / autres articles
 
-- [ ] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
+- [-] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
 --> (https://tailwindcomponents.com/component/footer-10)
 
 - [x] Navbar ajouter les menus et sous menus
