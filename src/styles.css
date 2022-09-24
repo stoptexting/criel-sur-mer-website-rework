@@ -206,6 +206,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 
+  z-index: 1;
   position: fixed;
   right: 0;
   top: 30%;
@@ -287,6 +288,10 @@ button:hover .hover-bar {
 /* Navbar */
 
 /* Navigation menu popup, large screen */
+nav{
+  z-index: 1;
+}
+
 nav ul button ~ div {
    top: -10px !important;
 }
