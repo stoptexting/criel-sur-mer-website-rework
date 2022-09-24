@@ -1,5 +1,5 @@
 $( document ).ready(function() {
     $('.close').on('click', function() {
-    $('#alert-border-2').fadeOut();
+    $('#alert-border-2').hide();
     });
   });

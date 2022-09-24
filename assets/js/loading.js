@@ -8,10 +8,6 @@ $( document ).ready(function() {
         backSpeed: 40,
         typeSpeed: 40
       });
-      // $('.close').on('click', function() {
-      //   $('#alert-border-2').fadeOut();
-      // });
-    
   });
   
   setTimeout(function () {
