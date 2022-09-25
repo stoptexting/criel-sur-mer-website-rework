@@ -3,4 +3,8 @@ $( document ).ready(function() {
     $('#alert-border-2').hide();
     });
 
+    $('.venir').on('click', function() {
+      location.href='./venir.html';
+    })
+
   });
