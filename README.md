@@ -8,20 +8,20 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - s'occcuper de l'interface téléphone
 
 ## TOP PRIORITY
-- [ ] Faire les pages / autres articles
---> [ ] Formulaire contact
---> [ ]  Atlas Biodiversité
---> [ ] Administratif
---> [ ] Informations
---> [ ] Mentions-Légales
---> [ ] Ordures
---> [ ] Urbanisme
+### Faire les pages / autres articles
+- [x] Formulaire contact
+- [ ]  Atlas Biodiversité
+- [ ] Administratif
+- [ ] Informations
+- [ ] Mentions-Légales
+- [ ] Ordures
+- [ ] Urbanisme
 
 - [x] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
 
 - [x] Navbar ajouter les menus et sous menus
 
-- [ ] Ajouter les articles (Noms, Posté le, Auteur et mini résumé)
+- [ ] Ajouter les articles page principale (Noms, Posté le, Auteur et mini résumé)
 
 
 
