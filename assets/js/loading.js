@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
     document.getElementById("video-background").currentTime += 6;
     $('body').css("overflow", "hidden");
     $('#main').css("display", "none");
@@ -9,7 +8,6 @@ $( document ).ready(function() {
         backSpeed: 40,
         typeSpeed: 40
       });
-    
   });
   
   setTimeout(function () {
