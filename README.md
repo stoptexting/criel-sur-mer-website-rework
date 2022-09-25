@@ -9,15 +9,19 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 ## TOP PRIORITY
 - [ ] Faire les pages / autres articles
+--> [ ] Formulaire contact
+--> [ ]  Atlas Biodiversité
+--> [ ] Administratif
+--> [ ] Informations
+--> [ ] Mentions-Légales
+--> [ ] Ordures
+--> [ ] Urbanisme
 
-- [-] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
---> (https://tailwindcomponents.com/component/footer-10)
+- [x] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
 
 - [x] Navbar ajouter les menus et sous menus
-![image](https://user-images.githubusercontent.com/87366457/190897928-5c162a6a-d5cf-47ec-884a-385a84b24ae5.png)
 
 - [ ] Ajouter les articles (Noms, Posté le, Auteur et mini résumé)
-![image](https://user-images.githubusercontent.com/87366457/190897950-ee8cd5bb-3200-4887-8166-bf177ffeb218.png)
 
 
 
