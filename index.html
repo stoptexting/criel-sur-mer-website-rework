@@ -34,8 +34,9 @@
          <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando"
             src="./assets/others/arrow_down.svg" onclick="init()" alt="arrow_down" /></a>
       </section>
-      
+      <!-- Main begin -->
       <div id="main" class="min-h-full">
+         <!-- Navbar begin -->
          <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
             <!-- logo -->
             <a class=" leading-none" href="#">
@@ -227,6 +228,7 @@
             venir ici
             </button>
          </nav>
+         <!-- Navbar end -->
          <!-- Navbar mobile -->
          <div class="navbar-menu bg-blue relative z-50 hidden">
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -265,6 +267,8 @@
                </div>
             </nav>
          </div>
+         <!-- Navbar mobile end -->
+         <!-- Alert begin -->
          <div id="alert-border-2" class="flex p-4 bg-red-100 border-t-4 border-red-500 dark:bg-red-200 block z-10" role="alert">
             <svg class="flex-shrink-0 w-5 h-5 text-red-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
@@ -315,156 +319,61 @@
                </div>
             </div>
          </div>
-
+         <!-- Alert end -->
+         <!-- Curtain begin -->
          <div class="container min-h-full min-w-full block">
-          <img src="./assets/others/view.png" class="min-h-full w-full h-full block">
-        </div>
-
+            <img src="./assets/others/view.png" class="min-h-full w-full h-full block">
+         </div>
+         <!-- Curtain end -->
+         <!-- Adventure begin -->
          <div class="container h-full min-h-full min-w-full w-full bg-grey-900 block" style="height: 1000px;">
-          <section class="mb-32 text-gray-800 background-radial-gradient z-auto h-auto">
-            <style>
-              .background-radial-gradient {
-                background-color: hsl(218, 41%, 15%);
-                background-image: radial-gradient(650px circle at 0% 0%,
-                    hsl(218, 41%, 35%) 15%,
-                    hsl(218, 41%, 30%) 35%,
-                    hsl(218, 41%, 20%) 75%,
-                    hsl(218, 41%, 19%) 80%,
-                    transparent 100%),
+            <section class="mb-32 text-gray-800 background-radial-gradient z-auto h-auto">
+               <style>
+                  .background-radial-gradient {
+                  background-color: hsl(218, 41%, 15%);
+                  background-image: radial-gradient(650px circle at 0% 0%,
+                  hsl(218, 41%, 35%) 15%,
+                  hsl(218, 41%, 30%) 35%,
+                  hsl(218, 41%, 20%) 75%,
+                  hsl(218, 41%, 19%) 80%,
+                  transparent 100%),
                   radial-gradient(1250px circle at 100% 100%,
-                    hsl(218, 41%, 45%) 15%,
-                    hsl(218, 41%, 30%) 35%,
-                    hsl(218, 41%, 20%) 75%,
-                    hsl(218, 41%, 19%) 80%,
-                    transparent 100%);
-              }
-            </style>
-      
-            <div class="px-6 py-12 md:px-12 text-center lg:text-left block">
-              <div class="container mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 flex items-center">
-                  <div class="mt-12 lg:mt-0">
-                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
-                      style="color: hsl(218, 81%, 95%)">
-                      Êtes-vous prêts <br /><span style="color: hsl(218, 81%, 75%)">pour l'aventure ?</span>
-                    </h1>
-                    <p class="text-lg" style="color: hsl(218, 81%, 95%)">
-                      Rejoignez-nous à Criel-Sur-Mer en cliquant sur le bouton "Venir Ici"
-                      En haut à droite de l'écran. Sautez le pas !
-                    </p>
+                  hsl(218, 41%, 45%) 15%,
+                  hsl(218, 41%, 30%) 35%,
+                  hsl(218, 41%, 20%) 75%,
+                  hsl(218, 41%, 19%) 80%,
+                  transparent 100%);
+                  }
+               </style>
+               <div class="px-6 py-12 md:px-12 text-center lg:text-left block">
+                  <div class="container mx-auto">
+                     <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                        <div class="mt-12 lg:mt-0">
+                           <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
+                              style="color: hsl(218, 81%, 95%)">
+                              Êtes-vous prêts <br /><span style="color: hsl(218, 81%, 75%)">pour l'aventure ?</span>
+                           </h1>
+                           <p class="text-lg" style="color: hsl(218, 81%, 95%)">
+                              Rejoignez-nous à Criel-Sur-Mer en cliquant sur le bouton "Venir Ici"
+                              En haut à droite de l'écran. Sautez le pas !
+                           </p>
+                        </div>
+                        <div class="mb-12 lg:mb-0">
+                           <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg"
+                              style="padding-top: 56.25%">
+                              <iframe class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                                 src="https://www.youtube.com/embed/NsAAtzPPc4o"
+                                 allowfullscreen="" data-gtm-yt-inspected-2340190_699="true" id="240632615"></iframe>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="mb-12 lg:mb-0">
-                    <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg"
-                      style="padding-top: 56.25%">
-                      <iframe class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/NsAAtzPPc4o"
-                        allowfullscreen="" data-gtm-yt-inspected-2340190_699="true" id="240632615"></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Section: Design Block -->
-        </div>
-         <!-- End Modal-->
-         <!-- <div id="carousel" class="carousel slide carousel-fade relative max-h-96" data-bs-ride="carousel">
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-              <button
-                type="button"
-                data-bs-target="#carousel"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carousel"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner relative w-full overflow-hidden">
-              <div class="carousel-item active float-left w-full">
-                <img
-                  src="./assets/others/img1.jpg"
-                  class="block object-none w-full max-h-96"
-                  alt="Criel Uno"
-                />
-              </div>
-              <div class="carousel-item float-left w-full">
-                <img
-                  src="./assets/others/img2.jpg"
-                  class="block object-none w-full max-h-96"
-                  alt="Criel Dos"
-                />
-              </div>
-              <div class="carousel-item float-left w-full">
-                <img
-                  src="./assets/others/img3.jpg"
-                  class="block object-none w-full max-h-96"
-                  alt="Criel Tres"
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide="prev"
-            >
-              <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide="next"
-            >
-              <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-            </div>
-            
-            
-            <div class="flex inline-block">
-            <div class="bg-red">
-              <h1> Actualités </h1>
-              <p>
-                REUNION CONCERTATION APPEL AUX BENEVOLES
-            
-                Conformément au message du 2 Août dernier…
-            
-                « La Municipalité lance un appel aux bénévoles afin de réactiver le comité des fêtes en sommeil depuis
-                quelques années… »
-            
-                Je vous invite à une réunion d’échanges et de concertation mercredi 21 septembre à 18h00 à la mairie, salle du
-                conseil municipal.
-            
-                Pour toute information :
-            
-                Accueil de la Mairie : Tél 02.35.50.51.20.
-                Courriel : mairie@criel-sur-mer.fr
-                Alain Trouessin, Maire.
-              </p>
-              <i class="h-12 fa fa-house-chimney" style="color: #1c7ed6; height: 16px; width: 16px;"></i>
-            </div>
-            
-            <div class="bg-blue">
-              <h1 class="flex justify-center">Mairie de Criel-sur-mer</h1>
-              <h1>reseaux</h1>
-              <h1>webcam</h1>
-            </div>
-            
-            </div> -->
+               </div>
+            </section>
+            <!-- Section: Design Block -->
+         </div>
+         <!-- Adventure end -->
+         <!-- Sidebar begin -->
          <div id="sidebar">
             <span><img src="./assets/others/arrow_down.svg" id="sidebar_image">
             </span>
@@ -475,6 +384,7 @@
                <li><a href="./atlas.html">Atlas Biodiversité</a></li>
             </ul>
          </div>
+         <!-- Sidebar end -->
          <!-- Footer section -->
          <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900 absolute w-full">
             <div class="md:flex md:justify-between">
@@ -552,7 +462,9 @@
                </div>
             </div>
          </footer>
+         <!-- Footer end -->
       </div>
+      <!-- Main end -->
       <video autoplay loop id="video-background" class="out" muted plays-inline>
          <source src="./assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
          <img
@@ -607,3 +519,4 @@
       <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
    </body>
 </html>
+
