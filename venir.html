@@ -27,15 +27,8 @@
       <link rel="stylesheet" href="./assets/css/output.css">
    </head>
    <body>
-      <section id="visit">
-         <div id="typed-strings w-full">
-            <span id="typed"></span>
-         </div>
-         <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando"
-            src="./assets/others/arrow_down.svg" onclick="init()" alt="arrow_down" /></a>
-      </section>
       <!-- Main begin -->
-      <div id="main" class="min-h-full">
+      <div id="main">
          <!-- Navbar begin -->
          <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
             <!-- logo -->
@@ -322,34 +315,23 @@
          <!-- Alert end -->
 
          <!-- Adventure begin -->
-         <div class="container h-full min-h-full min-w-full w-full background-radial-gradient" style="height:1000px;">
-            <section class="mb-32 text-gray-800 z-auto h-auto">
-               <div class="px-6 py-12 md:px-12 text-center lg:text-left block">
-                  <div class="container mx-auto">
-                     <div class="grid lg:grid-cols-2 gap-12 flex items-center">
-                        <div class="mt-12 lg:mt-0">
-                           <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
-                              style="color: hsl(218, 81%, 95%)">
-                              Êtes-vous prêts <br /><span style="color: hsl(218, 81%, 75%)">pour l'aventure ?</span>
-                           </h1>
-                           <p class="text-lg" style="color: hsl(218, 81%, 95%)">
-                              Rejoignez-nous à Criel-Sur-Mer en cliquant sur le bouton "Venir Ici"
-                              En haut à droite de l'écran. Sautez le pas !
-                           </p>
-                        </div>
-                        <div class="mb-12 lg:mb-0">
-                           <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg"
-                              style="padding-top: 56.25%">
-                              <iframe class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-                                 src="https://www.youtube.com/embed/NsAAtzPPc4o"
-                                 allowfullscreen="" data-gtm-yt-inspected-2340190_699="true" id="240632615"></iframe>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- Section: Design Block -->
+         <div class="container flex min-w-full background-radial-gradient justify-center block py-32">
+            <div>
+                <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
+                style="color: hsl(218, 81%, 95%)">
+                Comment <span style="color: hsl(218, 81%, 75%)">venir ?</span>
+                </h1>
+                <p class="text-lg" style="color: hsl(218, 81%, 95%)">
+                    Vous cherchez à passer un week-end en famille ou venir habiter ici?
+                    Voici toutes les informations dont vous aurez besoin !
+                </p><br>
+                <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                style="color: hsl(218, 81%, 95%)">
+                Comment <span style="color: hsl(218, 81%, 75%)">venir ?</span>
+                </h1>
+                <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Criel-Sur-Mer+(Criel-Sur-Mer)&amp;t=k&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="500" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a></iframe></div>
+            </div>
+            
          </div>
          <!-- Adventure end -->
           
@@ -446,12 +428,7 @@
          <!-- Footer end -->
       </div>
       <!-- Main end -->
-      <video autoplay loop id="video-background" class="out" muted plays-inline>
-         <source src="./assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
-         <img
-            src="https://c8.alamy.com/compfr/2jbtc4c/france-seine-maritime-cote-d-albatre-criel-sur-mer-vue-aerienne-2jbtc4c.jpg"
-            title="Your browser does not support the videoplayback tag" />
-      </video>
+
       <!-- ====== All Scripts -->
       <script>
          // Burger menus
@@ -496,7 +473,6 @@
          });
          
       </script>
-      <script src="./assets/js/loading.js"></script>
       <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
    </body>
 </html>
