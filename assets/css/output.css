@@ -4277,6 +4277,14 @@ textarea.form-control.is-invalid {
   z-index: auto;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.clear-both {
+  clear: both;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -4330,6 +4338,11 @@ textarea.form-control.is-invalid {
   margin-right: auto;
 }
 
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -4372,6 +4385,14 @@ textarea.form-control.is-invalid {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mb-32 {
@@ -4458,6 +4479,10 @@ textarea.form-control.is-invalid {
   height: auto;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -4508,6 +4533,32 @@ textarea.form-control.is-invalid {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.origin-top-right {
+  transform-origin: top right;
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-0 {
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -4612,6 +4663,10 @@ textarea.form-control.is-invalid {
   align-self: center;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -4648,6 +4703,10 @@ textarea.form-control.is-invalid {
 
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-t {
@@ -4821,6 +4880,11 @@ textarea.form-control.is-invalid {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .py-12 {
@@ -5028,6 +5092,14 @@ textarea.form-control.is-invalid {
   opacity: 0.25;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -5081,6 +5153,12 @@ textarea.form-control.is-invalid {
   transition-duration: 150ms;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-150 {
   transition-duration: 150ms;
 }
@@ -5089,8 +5167,24 @@ textarea.form-control.is-invalid {
   transition-duration: 200ms;
 }
 
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 #main{
@@ -5660,6 +5754,10 @@ nav ul button ~ div {
     margin-bottom: 0px;
   }
 
+  .md\:-mt-1 {
+    margin-top: -0.25rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -5674,6 +5772,10 @@ nav ul button ~ div {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
   }
 
   .md\:justify-between {
