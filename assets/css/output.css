@@ -4277,6 +4277,14 @@ textarea.form-control.is-invalid {
   z-index: auto;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.clear-both {
+  clear: both;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -4328,16 +4336,6 @@ textarea.form-control.is-invalid {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 
 .mb-8 {
@@ -4400,12 +4398,12 @@ textarea.form-control.is-invalid {
   margin-top: 3rem;
 }
 
-.mr-12 {
-  margin-right: 3rem;
-}
-
 .mr-0 {
   margin-right: 0px;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .block {
@@ -4636,6 +4634,10 @@ textarea.form-control.is-invalid {
   gap: 2rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -4672,6 +4674,10 @@ textarea.form-control.is-invalid {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-hidden {
@@ -4809,6 +4815,21 @@ textarea.form-control.is-invalid {
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#29364E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 54 78 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#111827\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#e8effd\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 239 253 / var(--tw-bg-opacity));
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -4855,6 +4876,10 @@ textarea.form-control.is-invalid {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .px-4 {
@@ -4922,6 +4947,16 @@ textarea.form-control.is-invalid {
   padding-bottom: 3rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -4957,6 +4992,10 @@ textarea.form-control.is-invalid {
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
@@ -5136,6 +5175,21 @@ textarea.form-control.is-invalid {
 .text-\[\#DDE3EE\] {
   --tw-text-opacity: 1;
   color: rgb(221 227 238 / var(--tw-text-opacity));
+}
+
+.text-\[\#EAF0FD\] {
+  --tw-text-opacity: 1;
+  color: rgb(234 240 253 / var(--tw-text-opacity));
+}
+
+.text-\[\#111827\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-\[\#303F5A\] {
+  --tw-text-opacity: 1;
+  color: rgb(48 63 90 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -5844,21 +5898,12 @@ nav ul button ~ div {
     left: 0px;
   }
 
-  .md\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
   }
 
   .md\:-mt-1 {
     margin-top: -0.25rem;
-  }
-
-  .md\:mr-0 {
-    margin-right: 0px;
   }
 
   .md\:mr-12 {
@@ -5894,6 +5939,11 @@ nav ul button ~ div {
     padding-right: 3rem;
   }
 
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -5907,6 +5957,11 @@ nav ul button ~ div {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -5932,14 +5987,6 @@ nav ul button ~ div {
 
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .lg\:mr-12 {
-    margin-right: 3rem;
-  }
-
-  .lg\:mr-0 {
-    margin-right: 0px;
   }
 
   .lg\:inline-block {
@@ -6018,5 +6065,10 @@ nav ul button ~ div {
   .xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
