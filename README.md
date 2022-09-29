@@ -7,22 +7,18 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 - s'occcuper de l'interface téléphone
 
-## TOP PRIORITY
+## TOP PRIORITY MISSION 1
 ### Faire les pages / autres articles
-- [x] Formulaire contact
-- [ ]  Atlas Biodiversité
+- [ ] Finir page accueil (Navbar fix hover-span... + Articles)
+- [ ] Page de Tourisme
+- [ ] Venir ici
 - [ ] Administratif
 - [ ] Informations
-- [ ] Mentions-Légales
-- [ ] Ordures
-- [ ] Urbanisme
+- [ ] (Mentions-Légales)
 
+- [x] Formulaire contact (Contacter)
 - [x] Footer page principale et autres pages (avec liens vers réseaux sociaux par exemple)
-
 - [x] Navbar ajouter les menus et sous menus
-
-- [ ] Ajouter les articles page principale (Noms, Posté le, Auteur et mini résumé)
-
 
 
 ## After top priorities
@@ -34,5 +30,8 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - [x] ~~Ajouter / retirer En un clic ! en fonction de media-type~~ [DELETED]
 - [x] ~~Center En un clic !~~ [DELETED]
 
+## TOP PRIORITY MISSION 2
+- [ ] Faire classes aliments (trier en fonction groupe vegan....)
+- [ ] Regen les classes (+10000)
 
 Current version : v4.0
