@@ -32,10 +32,10 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - [x] ~~Center En un clic !~~ [DELETED]
 
 ## TOP PRIORITY MISSION 2
-- [ ] Faire classes aliments (trier en fonction groupe vegan....) - G
+- [x] Faire classes aliments (trier en fonction groupe vegan....) - G
 - [ ] Regen les classes (+10000) - G
-- [ ] Faire les jointures Aliments - Nutrition Facts - G
-- [ ] Faire statistiques Python Pyplot graphique proportion vegan... dans population - G
-- [ ] Faire statistiques report proportion vegan... dans population - G
+- [x] Faire les jointures Aliments - Nutrition Facts (sum) - G
+- [x] Faire statistiques Python Pyplot graphique proportion vegan... dans population - G
+- [x] Faire statistiques report proportion vegan... dans population - G
 
 Current version : v4.0
