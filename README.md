@@ -10,7 +10,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 ## TOP PRIORITY MISSION 1
 ### Faire les pages / autres articles
 - [ ] Finir page accueil (Navbar fix hover-span... + Articles) - Ak/Aa
-- [ ] Page de Tourisme - N
+- [x] Page de Tourisme - N
 - [ ] Venir ici (Bouton airbnb avec lien, réserver, comment venir en voiture, en train...) - N
 - [ ] Administratif - Ak
 - [ ] (Mentions-Légales) - Ak
