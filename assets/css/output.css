@@ -5817,3 +5817,20 @@ nav ul button ~ div {
   width: 90%;
   margin-left: 3.50mm;
 }
+
+@media(max-width:1100px){
+#AllPage{
+  Height:1550px;
+}
+}
+@media(min-width:1101px) {
+#AllPage{
+  height: 1700px;
+}
+}
+#imglegal{
+  display: block;
+  margin: auto;
+}
+
+
