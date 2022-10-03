@@ -5781,3 +5781,9 @@ nav ul button ~ div {
     line-height: 1;
   }
 }
+
+@media (min-width: 1024px){
+  #imglegal{
+    margin-left: 115mm;
+  }
+}
