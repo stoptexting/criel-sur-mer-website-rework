@@ -5371,13 +5371,6 @@ button:hover .hover-bar {
   /* transform: translate(0,-200%); */
 }
 
-#Accueil:hover .hover-bar{
-  transform: translate(0, -155%);
-}
-
-#municipalite:hover .hover-bar{
-  transform: translate(0, -155%);
-}
 /* Navbar */
 
 /* Navigation menu popup, large screen */
@@ -5781,56 +5774,4 @@ nav ul button ~ div {
     line-height: 1;
   }
 }
-
-@media (min-width: 1024px){
-  #imglegal{
-    margin-left: 115mm;
-  }
-}
-
-#Img3Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-}
-
-#Img4Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-}
-
-#Img5Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-}
-
-#Img6Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-}
-
-#Img7Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-
-}
-#Img8Inner{
-  width: 90%;
-  margin-left: 3.50mm;
-}
-
-@media(max-width:1100px){
-#AllPage{
-  Height:1550px;
-}
-}
-@media(min-width:1101px) {
-#AllPage{
-  height: 1700px;
-}
-}
-#imglegal{
-  display: block;
-  margin: auto;
-}
-
 
