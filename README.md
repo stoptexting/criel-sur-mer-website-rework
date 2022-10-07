@@ -13,6 +13,9 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - [ ] Finir page accueil (Navbar fix hover-span... + Articles) - Ak/Aa
 - [ ] Section responsive + full height + center + padding right
 - [ ] Grandas images (lorsque hover image, page transforme en image viewer temporairement) + text underline when hover section
+### Autres
+- [ ] Solidarité ukraine
+- [ ] Comment venir ajouter quelques petites choses + modifier les liens pour des trucs plus exhaustifs
 - [x] Page de Tourisme - N
 - [x] Venir ici (Bouton airbnb avec lien, réserver, comment venir en voiture, en train...) - N
 - [ ] Administratif - Ak
@@ -29,6 +32,9 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - [x] ~~Ajouter camera en bas, nous contacter, adressres...~~
 - [x] ~~Mettre lien vers articles fictif lorem ipsum lorsque clique sur article page accueil~~
 - [x] Mettre lien lorsque l'on clique sur shortcut (href) - G
+- [ ] Lien navbar mobile 
+- [ ] Footer link 1, link 2, solidarité ukraine
+- [ ] Problème navbar hoverbar lorsque media type trop petit 
 
 ## At the end / when time
 - [x] ~~Ajouter / retirer En un clic ! en fonction de media-type~~ [DELETED]
