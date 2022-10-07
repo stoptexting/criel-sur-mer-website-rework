@@ -33,13 +33,6 @@
 </head>
 
 <body>
-   <section id="visit">
-      <div id="typed-strings w-full">
-         <span id="typed"></span>
-      </div>
-      <img id="arrow" class="smooth-link arrow_down animate__animated animate__bounce" href="#navigando"
-         src="./assets/others/arrow_down.svg" onclick="init()" alt="arrow_down" /></a>
-   </section>
 
    <!-- Main begin -->
    <div id="main" class="min-h-full">
@@ -47,7 +40,7 @@
       <!-- Navbar -->
       <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
          <!-- logo -->
-         <a class=" leading-none" href="./index.html">
+         <a class=" leading-none" href="#">
             <img class="w-12 p-0" src="./assets/others/logo2.png">
          </a>
          <!-- Mobile -->
@@ -65,10 +58,11 @@
             <div class="container flex justify-center mx-auto">
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
-                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" href="./index.html">
+                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" >
                      <a href="./index.html" class="btn btn-primary">Accueil </a>
-                     <span class="hover-bar"></span>
-
+                     
+                     <span class="hover-bar z-10"></span>
+                        
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -79,9 +73,8 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button id="municipalite" @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./index.html" class="btn btn-primary">Municipalité</a>
                      <span class="hover-bar"></span>
-                     
+                     Municipalité
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -121,9 +114,8 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./administratif.html" class="btn btn-primary">Services administratif </a>
                      <span class="hover-bar"></span>
-                     
+                     Services administratif
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -166,9 +158,8 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./tourisme.html" class="btn btn-primary">Tourisme et Patrimoine</a>
                      <span class="hover-bar"></span>
-                     
+                     Tourisme et Patrimoine
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -180,7 +171,7 @@
                      class="absolute w-60 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
                      <ul class="py-1">
                         <li>
-                           <a href="./tourisme.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
+                           <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
                               tourisme</a>
                         </li>
                         <li>
@@ -644,133 +635,129 @@
          </nav>
       </div>
 
+      <div
+         class="bg-gradient-to-b from-[#192234] via-[#192234] to-[#111827]  bottom-0 leading-5 h-full w-full overflow-hidden py-16 border-b ">
+         <h1 class="uppercase text-5xl text-[#e8effd] font-bold text-center">
+            criel-sur-mer
+         </h1>
 
-      <!-- Alert begin -->
-      <div id="alert-border-2" class="flex p-4 bg-[#19263E] border-b-2 border-white dark:[#19263E] block z-10"
-         role="alert">
-         <svg class="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-               clip-rule="evenodd"></path>
-         </svg>
-         <div class="ml-3 text-sm font-medium text-white">
-            Influenza Aviaire H5N1 détectée dans une exploitation. <a href="#"
-               class="font-semibold underline hover:text-[#A0A9B8]" data-modal-toggle="newsModal">En savoir plus</a>.
-         </div>
-         <button type="button"
-            class="close ml-auto -mx-1.5 -my-1.5 bg-[#19263E] dark:bg-[#19263E] text-white rounded-lg focus:ring-2 focus:ring-[#A0A9B8] p-1.5 hover:bg-[#A0A9B8] dark:hover:bg-[#A0A9B8] inline-flex h-8 w-8"
-            data-dismiss-target="#alert-border-2" aria-label="Close">
-            <span class="sr-only">Dismiss</span>
-            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg">
-               <path fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-            </svg>
-         </button>
+         <p class="text-lg text-[#e8effd] px-12 pt-8 text-justify">
+            Criel-sur-Mer s’est développée de part et d'autre de la vallée de l’Yères jusqu’à son embouchure. La station
+            balnéaire est située autour de la plage de galets et sur le plateau jusqu’au vallon de Mesnil-Val.
+            Les deux plages de Criel peuvent s'enorgueillir d'être encadrées par les plus hautes falaises de craie
+            d'Europe, surplombant la mer du Mont Joli Bois. Du point culminant, on peut apercevoir par beau temps à
+            l'ouest le phare d'Ailly au-delà de Dieppe et à l'est la baie de la Somme.
+            L'église de Saint-Aubain, initialement édifiée au XIV° siècle, le Château de Chantereine et le Manoir de
+            Briançon sont des lieux historiques de la commune à visiter.
+         </p>
+      </div>
 
-         <!-- Main modal -->
-         <div id="newsModal" tabindex="-1" aria-hidden="true"
-            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
-            <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-               <!-- Modal content -->
-               <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                  <!-- Modal header -->
-                  <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Information importante
-                     </h3>
-                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-toggle="newsModal">
-                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                           xmlns="http://www.w3.org/2000/svg">
-                           <path fill-rule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="sr-only">Fermer modal</span>
-                     </button>
-                  </div>
-                  <!-- Modal body -->
-                  <div class="p-6 space-y-6">
-                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        La préfecture nous alerte d’un cas d’influenza aviaire H5N1 détecté dans une exploitation située
-                        sur la
-                        commune de EU.
-                        Conformément aux règles sanitaires applicables en pareille situation et pour prévenir tout
-                        risque de
-                        propagation de ce virus animal, la préfecture nous informe que les animaux infectés ont été
-                        abattus,
-                        et qu’un arrêté en date du 19 septembre 2022 portant détermination d’un périmètre réglementé a
-                        été
-                        instauré.
-                        Ce périmètre comporte deux zones distinctes : une zone de protection (approximativement 3 kms
-                        autour du
-                        foyer) et une zone de surveillance (située approximativement 10kms autour du foyer).
-                     </p>
-                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        Notre commune est placée en zone de surveillance.
-                        Dans les 2 zones : les mesures suivantes de l’arrêté s’appliquent :
-                        - les volailles et autres oiseaux captifs doivent impérativement être mis à l'abri ou protégés
-                        par des
-                        filets. Tous les propriétaires de volatiles, qu’ils soient exploitants agricoles ou simples
-                        particuliers
-                        sont concernés.
-                        - l’introduction, la sortie, les mouvements, le transport et la mise en place de volailles et
-                        autres
-                        oiseaux captifs ainsi que les œufs, sont interdits au sein, à destination et en provenance de
-                        l’intégralité de la zone (article 3 de l’arrêté).
-                        En zone de protection : la surveillance des exploitations de volailles, commerciales et non
-                        commerciales, est renforcée. <a class="underline text-white"
-                           href="https://www.criel-sur-mer.fr/downloads/grippe-aviaire-19-sept-28129.pdf">Lire la
-                           suite</a>
-                     </p>
+
+      <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                           style="color: hsl(218, 81%, 95%)">
+                           Des perspectives à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">couper le
+                              souffle</span>
+                        </h1>
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                           style="color: hsl(218, 81%, 95%)">
+                           Les plus hautes falaises de craie d'Europe encadrent deux plages sauvages de galets !
+                        </p>
+
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl "
+                           style="color: hsl(218, 81%, 95%)">
+                           Dépaysement garanti pour un tourisme balnéaire hors des sentiers battus.
+                        </p>
+                     </div>
+                     <div class="mb-6 lg:mb-0 ">
+                        <div
+                           class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/falaises.jpg"></img>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         </section>
+
       </div>
-      <!-- Alert end -->
 
-      <div class=" background-radial-gradient">
+      <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
 
-         <!-- Welcome section begin -->
-         <div class="container h-full min-h-full min-w-full w-full  justify-center">
-            <div class=" text-gray-800 z-auto w-full">
-               <div class="px-6 py-12 md:px-12 text-center lg:text-left block w-full ">
-                  <div class="container h-auto w-full ">
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
 
-                     <div class="grid lg:grid-cols-2 flex items-center justify-center  w-full">
-                        <div class="mb-12 lg:mb-0 mt-12 lg:mt-0 mr-0 md:mr-12">
-                           <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
-                              style="color: hsl(218, 81%, 95%)">
-                              Bienvenue à <br /><span style="color: hsl(218, 81%, 75%)">Criel-sur-mer</span>
-                           </h1>
-                           <p class="text-lg text-justify" style="color: hsl(218, 81%, 95%)">
-                              Dans cette ville historique au riche patrimoine, mais soucieuse de modernisation,
-                              laissez-vous
-                              entraîner à travers plusieurs siècles d’histoire et d’architecture.
-                              Une cité comme entre parenthèses entre ses falaises, où il fait bon souffler et s'aérer.
-                           </p>
-                        </div>
-
-                        <div class="mb-12 lg:mb-0">
-                           <div
-                              class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg"
-                              style="padding-top: 56.25%">
-                              <iframe class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-                                 src="https://www.youtube.com/embed/NsAAtzPPc4o?autoplay=0" allowfullscreen=""
-                                 allow="autoplay" data-gtm-yt-inspected-2340190_699="true" id="240632615"></iframe>
-                           </div>
+                     <div class=" lg:mb-0 ">
+                        <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/G9258-3646548079.jpg"></img>
                         </div>
                      </div>
 
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl text-[#111827] md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">
+                           Une nature <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">préservée</span>
+                        </h1>
+                        <p class="sm:text-center text-[#111827] lg:text-left block text-base md:text-lg xl:text-xl">
+                           A l'estuaire d'un fleuve côtier de première catégorie, randonneurs et pêcheurs, campeurs et
+                           camping-caristes,
+                           chacun à son rythme découvre et apprécie les trésors d’une nature riche et exceptionnelle.
+                        </p>
+
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         </section>
+
+      </div>
+
+      <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                           style="color: hsl(218, 81%, 95%)">
+                           Voyager à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">travers les
+                              siècles</span>
+                        </h1>
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                           style="color: hsl(218, 81%, 95%)">
+                           Replongez au siècle de la Grande Mademoiselle, flânez au milieu des villas « Belle Époque »,
+                           découvrez au détour des rues les belles maisons traditionnelles à colombage…
+                           Dans cette ville historique au riche patrimoine, mais soucieuse de modernisation,
+                           laissez-vous entraîner à travers plusieurs siècles d’histoire et d’architecture.
+                        </p>
+
+                     </div>
+                     <div class="mb-6 lg:mb-0 ">
+                        <div
+                           class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/eglise.jpg"></img>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </div>
 
          <!-- Tourisme -->
          <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
@@ -813,154 +800,9 @@
 
          </div>
 
-         <!-- Actualités-->
-         <div class="py-16 md:pb-32 md:pt-0 md:px-12  mx-auto background-radial-gradient">
-            <h1
-               class="text-center md:text-left text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight md:pb-12 md:pt-24 leading-tight text-[#e8effd]">
-               <span>Les actualités de <button href="#" class="link link-underline link-underline-black"
-                     style="color: hsl(218, 81%, 75%)">Criel-sur-mer</button> </span>
-            </h1>
-
-            <div class=" lg:grid lg:grid-cols-3 ">
-
-               <div class=" py-12 md:py-0 md:mb-12 lg:mb-0 flex px-6 relative ">
-                  <img src="./assets/others/Conseil des Sages.jpg" class="w-full rounded shadow-lg" alt="" />
-
-                  <div class=" absolute bottom-0 left-12 ">
-                     <div class="relative md:top-8 ">
-
-                        <a class="px-7 py-3 bg-[#19263e] text-center text-white font-medium text-sm  uppercase "
-                           data-mdb-ripple="true" data-mdb-ripple-color="light">Actualités</a>
-
-                        <div class=" shadow-xl border-2 border-[#19263e] bg-white px-6 md:px-12 pt-1 rounded ml-4 ">
-                           <h1 class="text-center text-base text-[#19263e] font-bold tracking-tight py-2 uppercase">
-                              Appel à candidatures
-                           </h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class=" py-12 md:py-0 md:mb-12 lg:mb-0 flex px-6 relative ">
-                  <img src="./assets/others/8 sept.JPG" class="w-full rounded shadow-lg" alt="" />
-
-                  <div class=" absolute bottom-0 left-12 ">
-                     <div class="relative md:top-8 ">
-
-                        <a class="px-7 py-3 bg-[#19263e] text-center text-white font-medium text-sm  uppercase "
-                           data-mdb-ripple="true" data-mdb-ripple-color="light">Actualités</a>
-
-                        <div class=" shadow-xl border-2 border-[#19263e] bg-white px-6 md:px-12 pt-1 rounded ml-4 ">
-                           <h1 class="text-center text-base text-[#19263e] font-bold tracking-tight py-2 uppercase">
-                              Rencontre Biodiversité
-                           </h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class=" py-12 md:py-0 md:mb-12 lg:mb-0 flex px-6 relative ">
-                  <img src="./assets/others/octobre rose criel.JPG" class="w-full rounded shadow-lg" alt="" />
-
-                  <div class=" absolute bottom-0 left-12 ">
-                     <div class="relative md:top-8 ">
-
-                        <a class="px-7 py-3 bg-[#19263e] text-center text-white font-medium text-sm  uppercase "
-                           data-mdb-ripple="true" data-mdb-ripple-color="light">Actualités</a>
-
-                        <div class=" shadow-xl border-2 border-[#19263e] bg-white px-6 md:px-12 pt-1 rounded ml-4 ">
-                           <h1 class="text-center text-base text-[#19263e] font-bold tracking-tight py-2 uppercase">
-                              octobre rose
-                           </h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
-         </div>
-
-         <!-- Informations pratiques-->
-         <div class=" relative flex items-center justify-center  overflow-hidden md:py-32 px:0">
-            <div class="lg:grid lg:grid-cols-3 bg-white bg-opacity-90 py-12 divide-y lg:divide-y-0 divide-x-0 lg:divide-x  divide-[#203354] relative z-40 rounded  h-full border border-[#111827]">
-               <div class=" pb-12 lg:pb-0">
-                  <h1 class="text-[#19263e] text-center text-2xl uppercase font-semibold">Mairie de Criel sur Mer</h1>
-
-                  <div class="px-8 pt-6 text-lg ">
-                     <h5 class="sm:text-center text-[#19263e] lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> 76910 </span>Criel sur Mer
-                     </h5>
-                     <h5 class=" sm:text-center text-[#19263e] lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Tél : </span> 02.35.50.51.20
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Fax : </span> 02.35.50.22.37
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Email : </span>mairie@criel-sur-mer.fr
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold">Lundi</span> au <span
-                           class="font-semibold sm:text-center text-[#19263e] text-base md:text-lg xl:text-xl">vendredi</span>
-                        de 9h00 à 12h00 et de 13h30 à 17h00
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center lg:text-left block text-base md:text-lg xl:text-xl">
-                        Le samedi de <span class="font-semibold">10h</span> à <span
-                           class="font-semibold sm:text-center text-[#19263e]  text-base md:text-lg xl:text-xl">12h</span>
-                     </h5>
-                  </div>
-
-               </div>
-
-               <div class="text-white pb-12 lg:pt-0 pt-12 lg:pt-0 ">
-                  <h1 class="text-[#19263e] text-center text-2xl uppercase font-semibold ">Office de Tourisme</h1>
-
-                  <div class="pl-8 pt-6 text-xl">
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Adresse : </span>60 rue Libération
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Tél : </span> 02.35.86.05.69
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Site internet : </span>
-                        <a href="www.destination-letreport-mers.fr">destination-letreport-mers.fr</a>
-                     </h5>
-                  </div>
-                  <!-- <img class="w-48 h-48" src="#" alt=""> -->
-               </div>
-
-               <div class=" pb-12 lg:pb-0 pt-12 lg:pt-0">
-                  <h1 class="text-[#19263e] text-center text-2xl uppercase font-semibold">Mairie annexe de Criel sur Mer
-                  </h1>
-
-                  <div class="pl-8 pt-6 text-xl">
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold">Adresse </span> : 101 rue du Bourg 50110
-                     </h5>
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl">
-                        <span class="font-semibold"> Email : </span> mairie@criel-sur-mer.fr
-                     </h5>
-                     <h5 class="text-[#19263e] sm:text-center  lg:text-left block text-base md:text-lg xl:text-xl"> Tous
-                        les vendredis de 10h à 12h </h5>
-                  </div>
-                  <!-- <img class="w-48 h-48" src="#" alt=""> -->
-               </div>
-
-
-            </div>
-            <video autoplay loop muted class="absolute z-10  blur-sm aspect-video w-full invisible lg:visible">
-               <source src="./assets/others/videoplayback.mp4" type="video/mp4" />
-               Your browser does not support the video tag.
-            </video>
-
-         </div>
-
-      </div>
 
       <!-- Footer section -->
-      <footer class="p-6 bg-[#111827] absolute w-full ">
+      <footer class="p-6 bg-[#111827] absolute w-full">
          <div class="md:flex md:justify-between">
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                <div>
@@ -1044,61 +886,52 @@
          </div>
       </footer>
       <!-- Footer end -->
+
+      
    </div>
 
-   <!-- Main end -->
-   <video autoplay loop id="video-background" class="out" muted plays-inline>
-      <source src="./assets/others/videoplayback.mp4" type="video/mp4" type="video/mp4">
-      <img
-         src="https://c8.alamy.com/compfr/2jbtc4c/france-seine-maritime-cote-d-albatre-criel-sur-mer-vue-aerienne-2jbtc4c.jpg"
-         title="Your browser does not support the videoplayback tag" />
-   </video>
-   <!-- ====== All Scripts -->
    <script>
       // Burger menus
       document.addEventListener('DOMContentLoaded', function () {
-         // open
-         const burger = document.querySelectorAll('.navbar-burger');
-         const menu = document.querySelectorAll('.navbar-menu');
-
-         if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-               burger[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         // close
-         const close = document.querySelectorAll('.navbar-close');
-         const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-         if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-               close[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-               backdrop[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+  
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
+  
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+  
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
+  
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
       });
-
-   </script>
-   <script src="./assets/js/loading.js"></script>
-   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    </script>
 </body>
 
 </html>
