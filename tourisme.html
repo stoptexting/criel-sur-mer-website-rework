@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Criel-Sur-Mer
+  </title>
+
+  <link rel="shortcut icon" href="./assets/others/logo-criel.png" type="image/x-icon" />
+  <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" type="text/javascript"></script>
+  <script src="./node_modules/tw-elements/dist/js/index.min.js"></script>
+  <script src="./assets/js/pages.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/output.css">
+
+</head>
+
+<body>
+
+  <!-- Main begin -->
+  <div id="main" class="min-h-full">
+
+    <!-- Navbar -->
+    <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
+      <!-- logo -->
+      <a class=" leading-none" href="#">
+        <img class="w-12 p-0" src="./assets/others/logo2.png">
+      </a>
+      <!-- Mobile -->
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3 ">
+          <svg class="block h-4 w-4 fill-[#111827]" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Boutons de la navabar-->
+      <ul
+        class="text-lg hidden flex-justify-between transform lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto  space-x-18 sm:space-x-14 leading-4">
+        <div class="container flex justify-center mx-auto">
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <!-- Dropdown toggle button -->
+            <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]">
+              <a href="./index.html" class="btn btn-primary">Accueil </a>
+
+              <span class="hover-bar z-10"></span>
+
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </button>
+          </div>
+        </div>
+        <div class="container flex justify-center mx-auto">
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <!-- Dropdown toggle button -->
+            <button id="municipalite" @mouseover="open = true" class="hover:text-[#203354]">
+              <span class="hover-bar"></span>
+              Municipalité
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </button>
+
+            <!-- Dropdown menu -->
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms
+              @mouseover="open = true"
+              class="absolute w-40 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-12">
+              <ul class="py-1">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Conseil
+                    Municipal</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Comptes rendus
+                    Conseil
+                    Municipal</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Services
+                    Municipaux</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés
+                    publics</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bulletin
+                    Municipal</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container flex justify-center mx-auto">
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <!-- Dropdown toggle button -->
+            <button @mouseover="open = true" class="hover:text-[#203354]">
+              <span class="hover-bar"></span>
+              Services administratif
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </button>
+
+            <!-- Dropdown menu -->
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms
+              @mouseover="open = true"
+              class="absolute w-40 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
+              <ul class="py-1">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Urbanisme</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">CCAS</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Enfance-Vie
+                    Scolaire</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Médiathèque</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Etat Civil</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Démarches en
+                    ligne</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offre
+                    d'emploi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container flex justify-center mx-auto">
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <!-- Dropdown toggle button -->
+            <button @mouseover="open = true" class="hover:text-[#203354]">
+              <span class="hover-bar"></span>
+              Tourisme et Patrimoine
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </button>
+
+            <!-- Dropdown menu -->
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms
+              @mouseover="open = true"
+              class="absolute w-60 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
+              <ul class="py-1">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
+                    tourisme</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Hébergement
+                    Chantereine</a>
+                </li>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Camping</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Camping Le
+                      Mont Jolis
+                      Bois</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Aires de
+                      Camping Car</a>
+                  </li>
+                </ul>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Plage</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Eaux de
+                      baignade</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Cabine de
+                      plage</a>
+                  </li>
+                </ul>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Visite et
+                    Patrimoine</a>
+                </li>
+                <li>
+                  <a class="text-sm text-gray-700 block px-4 py-2">Nature</a>
+                </li>
+                <ul>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Biodiversité</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Espèce
+                      Nuisibles</a>
+                  </li>
+                </ul>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Contact et
+                    accès</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container flex justify-center mx-auto">
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <!-- Dropdown toggle button -->
+            <button @mouseover="open = true" class="hover:text-[#203354]">
+              <span class="hover-bar"></span>
+              Informations Pratiques
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms
+              @mouseover="open = true"
+              class="absolute w-60 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
+              <ul class="py-1">
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Déchets et
+                    Ordures
+                    ménageres</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Entretien voies
+                    et
+                    trottoir</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Nuissances
+                    sonores</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Qualités eau
+                    potable</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des
+                    professionnels</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des
+                    associations</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Location de
+                    Salles
+                    Municipales</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Carnet
+                    d'adresses</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Liens utiles</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Publications
+                    Utiles</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Chiens perdus</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
+                    UKRAINE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <button type="button" type="button"
+        class="venir font-semibold hidden lg:inline-block pl-1 pr-4 py-0 my-1 bg-[#203354] text-white text-sm leading-normal uppercase rounded shadow-md hover:bg-[#304C9D] hover:shadow-lg focus:bg-[#395AC8] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex align-center">
+        <img src="./assets/others/location.svg" class="w-8 inline-block pb-1" aria-hidden="true">
+        venir ici
+      </button>
+    </nav>
+
+    <!-- Navbar mobile -->
+    <div class="navbar-menu bg-blue relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8">
+          <button class="navbar-close">
+            <svg class="h-6 w-6 text-[#0F1122] cursor-pointer hover:text-gray-500 " xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul class="text-[#1D273B]">
+            <li class="mb-1">
+              <ul>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open"
+                    class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
+                    <span>Accueil</span>
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </button>
+                </div>
+              </ul>
+              <ul>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open"
+                    class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
+                    <span>Municipalité</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    class="right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                      <ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Conseil
+                            Municipal</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Comptes rendus
+                            Conseil
+                            Municipal</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Services
+                            Municipaux</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés
+                            publics</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Bulletin
+                            Municipal</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <ul>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open"
+                    class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
+                    <span>Services Administratif</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    class="right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                      <ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Urbanisme</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">CCAS</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Enfance-Vie
+                            Scolaire</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Médiathèque</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Etat
+                            Civil</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Démarches en
+                            ligne</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Offre
+                            d'emploi</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+
+              <ul>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open"
+                    class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
+                    <span>Tourisme Patrimoine</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    class="right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                      <ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
+                            tourisme</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Hébergement
+                            Chantereine</a>
+                        </li>
+                        <li>
+                          <a class="text-sm text-gray-700 block px-4 py-2">Camping</a>
+                        </li>
+                        <ul>
+                          <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Camping Le
+                              Mont Jolis
+                              Bois</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Aires de
+                              Camping Car</a>
+                          </li>
+                        </ul>
+                        <li>
+                          <a class="text-sm text-gray-700 block px-4 py-2">Plage</a>
+                        </li>
+                        <ul>
+                          <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Eaux de
+                              baignade</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Cabine de
+                              plage</a>
+                          </li>
+                        </ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Visite et
+                            Patrimoine</a>
+                        </li>
+                        <li>
+                          <a class="text-sm text-gray-700 block px-4 py-2">Nature</a>
+                        </li>
+                        <ul>
+                          <li>
+                            <a href="#"
+                              class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Biodiversité</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-12 py-2">Espèce
+                              Nuisibles</a>
+                          </li>
+                        </ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Contact et
+                            accès</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+              <ul>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                  <button @click="open = !open"
+                    class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
+                    <span>Informations Pratiques</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </button>
+                  <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    class="right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                      <ul>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Déchets et
+                            Ordures
+                            ménageres</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Entretien
+                            voies et
+                            trottoir</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Nuissances
+                            sonores</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Qualités eau
+                            potable</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des
+                            professionnels</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Guides des
+                            associations</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Location de
+                            Salles
+                            Municipales</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Carnet
+                            d'adresses</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Liens
+                            utiles</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Publications
+                            Utiles</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Marchés</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Chiens
+                            perdus</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
+                            UKRAINE</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="bg-gradient-to-b from-[#192234] via-[#192234] to-[#111827]  bottom-0 leading-5 h-full w-full overflow-hidden py-16 border-b ">
+      <h1 class="uppercase text-5xl text-[#e8effd] font-bold text-center">
+        criel-sur-mer
+      </h1>
+
+      <p class="text-lg text-[#e8effd] px-12 pt-8 text-justify">
+        Criel-sur-Mer s’est développée de part et d'autre de la vallée de l’Yères jusqu’à son embouchure. La station
+        balnéaire est située autour de la plage de galets et sur le plateau jusqu’au vallon de Mesnil-Val.
+        Les deux plages de Criel peuvent s'enorgueillir d'être encadrées par les plus hautes falaises de craie
+        d'Europe, surplombant la mer du Mont Joli Bois. Du point culminant, on peut apercevoir par beau temps à
+        l'ouest le phare d'Ailly au-delà de Dieppe et à l'est la baie de la Somme.
+        L'église de Saint-Aubain, initialement édifiée au XIV° siècle, le Château de Chantereine et le Manoir de
+        Briançon sont des lieux historiques de la commune à visiter.
+      </p>
+    </div>
+
+
+    <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+      <section class="my-4 text-gray-800 z-0 relative">
+        <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+          <div class=" w-full">
+            <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+              <div class="mt-2 lg:mt-0 ">
+                <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                  style="color: hsl(218, 81%, 95%)">
+                  Des perspectives à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">couper le
+                    souffle</span>
+                </h1>
+                <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                  style="color: hsl(218, 81%, 95%)">
+                  Les plus hautes falaises de craie d'Europe encadrent deux plages sauvages de galets !
+                </p>
+
+                <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl "
+                  style="color: hsl(218, 81%, 95%)">
+                  Dépaysement garanti pour un tourisme balnéaire hors des sentiers battus.
+                </p>
+              </div>
+              <div class="mb-6 lg:mb-0 ">
+                <div
+                  class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                  style="padding-top: 56.25%">
+                  <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                    src="./assets/others/carousel/falaises.jpg"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
+
+      <section class="my-4 text-gray-800 z-0 relative">
+        <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+          <div class=" w-full">
+            <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+
+              <div class=" lg:mb-0 ">
+                <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm"
+                  style="padding-top: 56.25%">
+                  <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                    src="./assets/others/carousel/G9258-3646548079.jpg"></img>
+                </div>
+              </div>
+
+              <div class="mt-2 lg:mt-0 ">
+                <h1 class="text-3xl text-[#111827] md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">
+                  Une nature <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">préservée</span>
+                </h1>
+                <p class="sm:text-center text-[#111827] lg:text-left block text-base md:text-lg xl:text-xl">
+                  A l'estuaire d'un fleuve côtier de première catégorie, randonneurs et pêcheurs, campeurs et
+                  camping-caristes,
+                  chacun à son rythme découvre et apprécie les trésors d’une nature riche et exceptionnelle.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+      <section class="my-4 text-gray-800 z-0 relative">
+        <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+          <div class=" w-full">
+            <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+              <div class="mt-2 lg:mt-0 ">
+                <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                  style="color: hsl(218, 81%, 95%)">
+                  Voyager à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">travers les
+                    siècles</span>
+                </h1>
+                <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                  style="color: hsl(218, 81%, 95%)">
+                  Replongez au siècle de la Grande Mademoiselle, flânez au milieu des villas « Belle Époque »,
+                  découvrez au détour des rues les belles maisons traditionnelles à colombage…
+                  Dans cette ville historique au riche patrimoine, mais soucieuse de modernisation,
+                  laissez-vous entraîner à travers plusieurs siècles d’histoire et d’architecture.
+                </p>
+
+              </div>
+              <div class="mb-6 lg:mb-0 ">
+                <div
+                  class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                  style="padding-top: 56.25%">
+                  <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                    src="./assets/others/carousel/eglise.jpg"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Tourisme -->
+    <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
+
+      <section class="my-4 text-gray-800 z-0 relative">
+        <div class="px-4 py-4 lg:px-8 text-center lg:text-left block">
+          <div class=" w-full">
+            <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+
+              <div class="lg:mb-0 ">
+                <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm"
+                  style="padding-top: 56.25%">
+                  <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                    src="./assets/others/carousel/chateau.jpg"></img>
+                </div>
+              </div>
+
+              <div class="mt-2 lg:mt-0 ">
+                <h1 class=" text-3xl text-[#111827] lg:text-3xl xl:text-5xl font-bold tracking-tight mb-12 ">
+                  Où passer de bonnes <br /><span class="pl-0 2xl:pl-12 " style="color: hsl(218, 81%, 75%)">vacances à
+                    Criel-Sur-Mer ?</span>
+                </h1>
+                <p
+                  class="sm:text-center text-[#111827] lg:text-left block text-base md:text-lg xl:text-xl text-justify">
+
+
+                  Situé à 800 mètres de la plage et 500 mètres du bourg, l'Hôstellerie de Chantereine, est
+                  un lieu idéal pour vos séjours seul, en famille ou en groupe.
+                  Plus d'informations sur <a class="font-semibold text-[#303F5A]"
+                    href="https://www.chateaudechantereine.fr/">le site de l'hôtel </a>
+
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- Sidebar begin -->
+    <div id="sidebar">
+      <span><img src="./assets/others/arrow_down.svg" id="sidebar_image">
+      </span>
+      <ul>
+        <li id="enunclic" class="bg-blue-300 rounded">En un clic !</li>
+        <li><a href="./urbanisme.html">Urbanisme</a></li>
+        <li><a href="./ordures.html">Ordure et déchets</a></li>
+        <li><a href="./administratif.html">Administratif</a></li>
+        <li><a href="./atlas.html">Atlas Biodiversité</a></li>
+      </ul>
+    </div>
+    <!-- Sidebar end -->
+
+
+
+    <!-- Footer section -->
+    <footer class="p-6 bg-[#111827] absolute w-full">
+      <div class="md:flex md:justify-between">
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
+            <ul class="text-gray-400">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Link 1</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Link 2</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Nous Contacter</h2>
+            <ul class="text-gray-400">
+              <li class="mb-4">
+                <a href="./formulaire.html" class="hover:underline ">Formulaire</a>
+              </li>
+              <li>
+                <a href="./informations.html" class="hover:underline">Informations</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
+            <ul class="text-gray-400">
+              <li class="mb-4">
+                <a href="./mentions-legales.html" class="hover:underline">Mentions Légales</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-2 border-gray-200 sm:mx-auto border-gray-700 lg:my-4">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm sm:text-center text-gray-400">© 2022 <a href="https://www.youtube.com/watch?v=8ybW48rKBME"
+            class="hover:underline">Criel-Sur-Mer™</a>. Tous
+          Droits Réservés.
+        </span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+          <a href="https://www.facebook.com/Criel-Sur-Mer-112610320400917/" class="text-gray-500 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a href="https://www.instagram.com/explore/locations/251443514/criel-sur-mer/?hl=fr"
+            class="text-gray-500 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Instagram page</span>
+          </a>
+          <a href="https://mobile.twitter.com/76actu" class="text-gray-500 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+              </path>
+            </svg>
+            <span class="sr-only">Twitter page</span>
+          </a>
+          <a href="https://github.com/stopsimping/criel-sur-mer-website-rework" class="text-gray-500 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">GitHub account</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+
+  </div>
+
+  <script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+      // open
+      const burger = document.querySelectorAll('.navbar-burger');
+      const menu = document.querySelectorAll('.navbar-menu');
+
+      if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+          burger[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+
+      // close
+      const close = document.querySelectorAll('.navbar-close');
+      const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+      if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+          close[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+
+      if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+          backdrop[i].addEventListener('click', function () {
+            for (var j = 0; j < menu.length; j++) {
+              menu[j].classList.toggle('hidden');
+            }
+          });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
