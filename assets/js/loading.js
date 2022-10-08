@@ -2,6 +2,7 @@ $( document ).ready(function() {
     document.getElementById("video-background").currentTime += 6;
     $('body').css("overflow", "hidden");
     $('#main').css("display", "none");
+    $('footer').css("display", "none");
       
       var typed = new Typed('#typed',{
         strings:["Bienvenue.","Criel-sur-Mer vous attend !", "Qu'attendez vous ?"],
@@ -24,6 +25,7 @@ $( document ).ready(function() {
         $("#visit").fadeOut("slow", function(){
         $("#main").fadeIn("slow", function() {
             $('body').css("overflow", "auto");
+            $('footer').css("display", "block");
         });
 
         
