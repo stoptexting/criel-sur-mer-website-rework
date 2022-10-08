@@ -11,7 +11,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 ### Faire les pages / autres articles
 ### Accueil
 - [ ] Finir page accueil (Navbar fix hover-span... + Articles) - Ak/Aa
-- [ ] Section responsive + full height + center + padding right
+- [x] Section responsive + full height + center + padding right
 - [ ] Grandas images (lorsque hover image, page transforme en image viewer temporairement) + text underline when hover section
 ### Autres
 - [ ] Solidarité ukraine
