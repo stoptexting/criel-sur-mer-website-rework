@@ -8,6 +8,7 @@
    <title>
       Criel-Sur-Mer
    </title>
+
    <link rel="shortcut icon" href="./assets/others/logo-criel.png" type="image/x-icon" />
    <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
    <!-- Fonts -->
@@ -28,18 +29,18 @@
    <script src="./assets/js/pages.js"></script>
    <!-- CSS -->
    <link rel="stylesheet" href="./assets/css/output.css">
-   <link rel="stylesheet" href="./src/styles.css">
+
 </head>
 
 <body>
 
-
    <!-- Main begin -->
    <div id="main" class="min-h-full">
+
       <!-- Navbar -->
       <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
          <!-- logo -->
-         <a class=" leading-none" href="./index.html">
+         <a class=" leading-none" href="#">
             <img class="w-12 p-0" src="./assets/others/logo2.png">
          </a>
          <!-- Mobile -->
@@ -57,10 +58,11 @@
             <div class="container flex justify-center mx-auto">
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
-                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" href="./index.html">
+                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" >
                      <a href="./index.html" class="btn btn-primary">Accueil </a>
-                     <span class="hover-bar"></span>
-
+                     
+                     <span class="hover-bar z-10"></span>
+                        
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -71,9 +73,8 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button id="municipalite" @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./index.html" class="btn btn-primary">Municipalité</a>
                      <span class="hover-bar"></span>
-
+                     Municipalité
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -113,9 +114,8 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./administratif.html" class="btn btn-primary">Services administratif </a>
                      <span class="hover-bar"></span>
-
+                     Services administratif
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -154,14 +154,12 @@
                   </div>
                </div>
             </div>
-
             <div class="container flex justify-center mx-auto">
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
-                     <a href="./tourisme.html" class="btn btn-primary">Tourisme et Patrimoine</a>
                      <span class="hover-bar"></span>
-
+                     Tourisme et Patrimoine
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -173,8 +171,7 @@
                      class="absolute w-60 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
                      <ul class="py-1">
                         <li>
-                           <a href="./tourisme.html"
-                              class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
+                           <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
                               tourisme</a>
                         </li>
                         <li>
@@ -638,58 +635,174 @@
          </nav>
       </div>
 
-
-      <div class="bg-[#111827] bg-gradient-to-b from-[#192234] via-[#192234] to-[#242F46] py-16  ">
-         <h1 class="text-5xl uppercase text-white text-center font-bold">
-            Mentions légales
+      <div
+         class="bg-gradient-to-b from-[#192234] via-[#192234] to-[#111827]  bottom-0 leading-5 h-full w-full overflow-hidden py-16 border-b ">
+         <h1 class="uppercase text-5xl text-[#e8effd] font-bold text-center">
+            criel-sur-mer
          </h1>
 
-         <p class="text-xl text-white text-center py-4 pb-12 font-light">
-            Informations légales des sites www.criel-sur-mer.fr et www.chateaudechantereine.fr
+         <p class="text-lg text-[#e8effd] px-12 pt-8 text-justify">
+            Criel-sur-Mer s’est développée de part et d'autre de la vallée de l’Yères jusqu’à son embouchure. La station
+            balnéaire est située autour de la plage de galets et sur le plateau jusqu’au vallon de Mesnil-Val.
+            Les deux plages de Criel peuvent s'enorgueillir d'être encadrées par les plus hautes falaises de craie
+            d'Europe, surplombant la mer du Mont Joli Bois. Du point culminant, on peut apercevoir par beau temps à
+            l'ouest le phare d'Ailly au-delà de Dieppe et à l'est la baie de la Somme.
+            L'église de Saint-Aubain, initialement édifiée au XIV° siècle, le Château de Chantereine et le Manoir de
+            Briançon sont des lieux historiques de la commune à visiter.
          </p>
+      </div>
 
-         <div class="">
-            <div class="border-y py-12">
-               <h2 class="text-2xl text-white text-center  font-bold uppercase  ">
-                  Propriété Intellectuelle
-               </h2>
-      
-               <p class="text-lg text-white text-justify pt-4 font-light px-12 md:px-24">
-                  Les présents sites sont la propriété de la ville de Criel sur Mer, qui en est l'auteur au
-                  sens des articles L. 111.1 et suivants du Code de la propriété intellectuelle. Les
-                  photographies, textes, slogans, dessins, images, séquences animées sonores ou non ainsi
-                  que toutes oeuvres intégrées dans le site sont la propriété de la ville de Criel sur
-                  Mer ou de tiers ayant autorisé la ville de Criel sur Mer à les utiliser. La
-                  reproduction, sur un support papier ou informatique, du site est autorisée sous réserve
-                  qu'elle soit strictement réservée à un usage personnel, excluant tout usage à des fins
-                  publicitaires et/ou commerciales et/ou d'informations, et qu'elle soit conforme aux
-                  dispositions de l'article L122-5 du Code de la Propriété Intellectuelle. A l'exception
-                  des dispositions ci-dessus, toute reproduction, représentation, utilisation ou
-                  modification, par quelque procédé que ce soit et sur quelque support que ce soit, de
-                  tout ou partie du site, de tout ou partie des contenus qui le composent, sans avoir
-                  obtenu l'autorisation préalable de la ville de Criel sur Mer est strictement
-                  &nbsp;interdite et constitue un délit de contrefaçon.
-               </p>
-            </div>
 
-            <div class="pt-12">
-               <h2 class="text-2xl text-white text-center  font-bold uppercase  ">
-                  PROTECTION DES DONNEES
-               </h2>
-               <div class="flex justify-center pt-4 px-16 md:px-0">
-                  <img src="./assets/others/mentions-legales.png" class="max-w-full h-auto">
+      <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                           style="color: hsl(218, 81%, 95%)">
+                           Des perspectives à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">couper le
+                              souffle</span>
+                        </h1>
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                           style="color: hsl(218, 81%, 95%)">
+                           Les plus hautes falaises de craie d'Europe encadrent deux plages sauvages de galets !
+                        </p>
+
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl "
+                           style="color: hsl(218, 81%, 95%)">
+                           Dépaysement garanti pour un tourisme balnéaire hors des sentiers battus.
+                        </p>
+                     </div>
+                     <div class="mb-6 lg:mb-0 ">
+                        <div
+                           class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/falaises.jpg"></img>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               
             </div>
+         </section>
+
+      </div>
+
+      <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
+
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+
+                     <div class=" lg:mb-0 ">
+                        <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/G9258-3646548079.jpg"></img>
+                        </div>
+                     </div>
+
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl text-[#111827] md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">
+                           Une nature <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">préservée</span>
+                        </h1>
+                        <p class="sm:text-center text-[#111827] lg:text-left block text-base md:text-lg xl:text-xl">
+                           A l'estuaire d'un fleuve côtier de première catégorie, randonneurs et pêcheurs, campeurs et
+                           camping-caristes,
+                           chacun à son rythme découvre et apprécie les trésors d’une nature riche et exceptionnelle.
+                        </p>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </div>
+
+      <div class="bg-[#111827] clear-both z-0 overflow-auto">
+
+         <section class="my-4 text-gray-800 z-0 relative">
+            <div class="px-8 py-4 md:px-8 text-center lg:text-left block">
+               <div class=" w-full">
+                  <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                     <div class="mt-2 lg:mt-0 ">
+                        <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12"
+                           style="color: hsl(218, 81%, 95%)">
+                           Voyager à <br /><span class="p-12 ml-4" style="color: hsl(218, 81%, 75%)">travers les
+                              siècles</span>
+                        </h1>
+                        <p class="sm:text-center lg:text-left block text-base md:text-lg xl:text-xl"
+                           style="color: hsl(218, 81%, 95%)">
+                           Replongez au siècle de la Grande Mademoiselle, flânez au milieu des villas « Belle Époque »,
+                           découvrez au détour des rues les belles maisons traditionnelles à colombage…
+                           Dans cette ville historique au riche patrimoine, mais soucieuse de modernisation,
+                           laissez-vous entraîner à travers plusieurs siècles d’histoire et d’architecture.
+                        </p>
+
+                     </div>
+                     <div class="mb-6 lg:mb-0 ">
+                        <div
+                           class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm shadow-lg"
+                           style="padding-top: 56.25%">
+                           <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                              src="./assets/others/carousel/eglise.jpg"></img>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </div>
+
+         <!-- Tourisme -->
+         <div class="bg-[#e8effd] clear-both z-0 overflow-auto">
+
+            <section class="my-4 text-gray-800 z-0 relative">
+               <div class="px-4 py-4 lg:px-8 text-center lg:text-left block">
+                  <div class=" w-full">
+                     <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+
+                        <div class="lg:mb-0 ">
+                           <div
+                              class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-sm"
+                              style="padding-top: 56.25%">
+                              <img class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
+                                 src="./assets/others/carousel/chateau.jpg"></img>
+                           </div>
+                        </div>
+
+                        <div class="mt-2 lg:mt-0 ">
+                           <h1 class=" text-3xl text-[#111827] lg:text-3xl xl:text-5xl font-bold tracking-tight mb-12 ">
+                              Où passer de bonnes <br /><span class="pl-0 2xl:pl-12 "
+                                 style="color: hsl(218, 81%, 75%)">vacances à Criel-Sur-Mer ?</span>
+                           </h1>
+                           <p
+                              class="sm:text-center text-[#111827] lg:text-left block text-base md:text-lg xl:text-xl text-justify">
+
+
+                              Situé à 800 mètres de la plage et 500 mètres du bourg, l'Hôstellerie de Chantereine, est
+                              un lieu idéal pour vos séjours seul, en famille ou en groupe.
+                              Plus d'informations sur <a class="font-semibold text-[#303F5A]"
+                                 href="https://www.chateaudechantereine.fr/">le site de l'hôtel </a>
+
+                           </p>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
 
          </div>
 
 
-      </div>
-
-
       <!-- Footer section -->
-      <footer class="p-6 bg-[#111827]  w-full ">
+      <footer class="p-6 bg-[#111827] absolute w-full">
          <div class="md:flex md:justify-between">
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                <div>
@@ -772,54 +885,53 @@
             </div>
          </div>
       </footer>
+      <!-- Footer end -->
+
+      
    </div>
-   <!-- Main end -->
-   <!-- ====== All Scripts -->
+
    <script>
       // Burger menus
       document.addEventListener('DOMContentLoaded', function () {
-         // open
-         const burger = document.querySelectorAll('.navbar-burger');
-         const menu = document.querySelectorAll('.navbar-menu');
-
-         if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-               burger[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         // close
-         const close = document.querySelectorAll('.navbar-close');
-         const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-         if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-               close[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-               backdrop[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+  
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
+  
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+  
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
+  
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle('hidden');
+              }
+            });
+          }
+        }
       });
-
-   </script>
-
-   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    </script>
 </body>
 
 </html>
