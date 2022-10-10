@@ -14,7 +14,7 @@ $( document ).ready(function() {
   setTimeout(function () {
     init()
   
-  }, 1200); 
+  }, 120000); 
   
   function init() {
   
