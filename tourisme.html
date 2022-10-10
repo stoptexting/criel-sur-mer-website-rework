@@ -35,12 +35,9 @@
 <body>
 
    <!-- Main begin -->
-   <div id="main" class="min-h-full">
-
-      <!-- Navbar -->
-      <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
+   <nav class="text-[#0F1122] relative px-4 py-2 flex justify-between gap-x-8 bg-white">
          <!-- logo -->
-         <a class=" leading-none" href="#">
+         <a class=" leading-none" href="./index.html">
             <img class="w-12 p-0" src="./assets/others/logo2.png">
          </a>
          <!-- Mobile -->
@@ -58,11 +55,10 @@
             <div class="container flex justify-center mx-auto">
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
-                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" >
+                  <button id="Accueil" @mouseover="open = true" class="hover:text-[#203354]" href="./index.html">
                      <a href="./index.html" class="btn btn-primary">Accueil </a>
-                     
-                     <span class="hover-bar z-10"></span>
-                        
+                     <span class="hover-bar"></span>
+
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -73,8 +69,9 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button id="municipalite" @mouseover="open = true" class="hover:text-[#203354]">
+                     <a href="./index.html" class="btn btn-primary">Municipalité</a>
                      <span class="hover-bar"></span>
-                     Municipalité
+
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -114,8 +111,9 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
+                     <a href="./administratif.html" class="btn btn-primary">Services administratif </a>
                      <span class="hover-bar"></span>
-                     Services administratif
+
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -158,8 +156,9 @@
                <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
                   <!-- Dropdown toggle button -->
                   <button @mouseover="open = true" class="hover:text-[#203354]">
+                     <a href="./tourisme.html" class="btn btn-primary">Tourisme et Patrimoine</a>
                      <span class="hover-bar"></span>
-                     Tourisme et Patrimoine
+
                      <path fill-rule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd" />
@@ -171,7 +170,8 @@
                      class="absolute w-60 py-2 bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-14">
                      <ul class="py-1">
                         <li>
-                           <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
+                           <a href="./tourisme.html"
+                              class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Office de
                               tourisme</a>
                         </li>
                         <li>
@@ -293,7 +293,7 @@
                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Chiens perdus</a>
                         </li>
                         <li>
-                           <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
+                           <a href="./solidarite.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
                               UKRAINE</a>
                         </li>
                      </ul>
@@ -393,7 +393,7 @@
                         <div @click.away="open = false" class="relative" x-data="{ open: false }">
                            <button @click="open = !open"
                               class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
-                              <span>Services Administratif</span>
+                               <span>Services Administratif</span>
                               <svg fill="currentColor" viewBox="0 0 20 20"
                                  :class="{'rotate-180': open, 'rotate-0': !open}"
                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -451,7 +451,7 @@
                         <div @click.away="open = false" class="relative" x-data="{ open: false }">
                            <button @click="open = !open"
                               class="block p-4 text-sm font-semibold hover:bg-[#B4C7EC]/20 hover:text-[#4F658D] rounded">
-                              <span>Tourisme Patrimoine</span>
+                               <span>Tourisme Patrimoine</span>
                               <svg fill="currentColor" viewBox="0 0 20 20"
                                  :class="{'rotate-180': open, 'rotate-0': !open}"
                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -623,7 +623,7 @@
                                           perdus</a>
                                     </li>
                                     <li>
-                                       <a href="./solidarite"
+                                       <a href="./solidarite.html"
                                           class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
                                           UKRAINE</a>
                                     </li>
@@ -634,6 +634,7 @@
             </div>
          </nav>
       </div>
+
 
       <div
          class="bg-gradient-to-b from-[#192234] via-[#192234] to-[#111827]  bottom-0 leading-5 h-full w-full overflow-hidden py-16 border-b ">
