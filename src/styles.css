@@ -340,3 +340,11 @@ html{
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
+article a {
+  text-decoration: underline;
+}
+
+article li a::before {
+  content: "📌";
+}
