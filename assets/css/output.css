@@ -4356,12 +4356,12 @@ textarea.form-control.is-invalid {
   margin: 1.5rem;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-0 {
   margin: 0px;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-auto {
@@ -4446,6 +4446,10 @@ textarea.form-control.is-invalid {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -4476,10 +4480,6 @@ textarea.form-control.is-invalid {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
 }
 
 .block {
@@ -4566,32 +4566,6 @@ textarea.form-control.is-invalid {
   height: 12rem;
 }
 
-.max-h-60 {
-  max-height: 15rem;
-}
-
-.max-h-max {
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
-}
-
-.max-h-96 {
-  max-height: 24rem;
-}
-
-.max-h-\[100rem\] {
-  max-height: 100rem;
-}
-
-.max-h-\[10rem\] {
-  max-height: 10rem;
-}
-
-.max-h-\[80rem\] {
-  max-height: 80rem;
-}
-
 .min-h-full {
   min-height: 100%;
 }
@@ -4648,10 +4622,6 @@ textarea.form-control.is-invalid {
 
 .w-48 {
   width: 12rem;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .min-w-full {
@@ -5153,10 +5123,6 @@ textarea.form-control.is-invalid {
 
 .p-1 {
   padding: 0.25rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .px-4 {
@@ -5984,11 +5950,15 @@ html{
 }
 
 article a {
+  position: relative;
   text-decoration: underline;
 }
 
 article li a::before {
   content: "📌";
+  text-decoration: none;
+  position: absolute;
+  left: -1.5rem;
 }
 
 .checked\:border-\[\#6E8BC0\]:checked {
@@ -6449,12 +6419,12 @@ article li a::before {
     width: auto;
   }
 
-  .lg\:w-full {
-    width: 100%;
-  }
-
   .lg\:w-96 {
     width: 24rem;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grid-cols-3 {
@@ -6473,12 +6443,6 @@ article li a::before {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:divide-y-0 > :not([hidden]) ~ :not([hidden]) {

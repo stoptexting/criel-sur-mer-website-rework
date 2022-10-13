@@ -342,9 +342,14 @@ html{
 }
 
 article a {
+  position: relative;
   text-decoration: underline;
 }
 
 article li a::before {
   content: "📌";
+  text-decoration: none;
+
+  position: absolute;
+  left: -1.5rem;
 }
