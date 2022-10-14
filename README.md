@@ -13,6 +13,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 
 ### Autres
 - [x] Solidarité ukraine
+- [ ] Biodiversite.html
 - [x] Comment venir ajouter quelques petites choses + modifier les liens pour des trucs plus exhaustifs
 - [x] Page de Tourisme - N
 - [x] Venir ici (Bouton airbnb avec lien, réserver, comment venir en voiture, en train...) - N
