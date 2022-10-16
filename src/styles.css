@@ -229,14 +229,6 @@ button:hover .hover-bar {
   /* transform: translate(0,-200%); */
 }
 
-#Accueil:hover .hover-bar{
-  transform: translate(0, -155%);
-}
-
-#municipalite:hover .hover-bar{
-  transform: translate(0, -155%);
-}
-
 /* Navbar */
 
 /* Navigation menu popup, large screen */
