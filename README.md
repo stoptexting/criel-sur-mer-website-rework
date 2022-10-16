@@ -1,9 +1,6 @@
 # criel-sur-mer-website-rework
 https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 # TODO LIST
-# NAVBAR !!
-- s'occcuper de l'interface téléphone  
-
 ## TOP PRIORITY MISSION 1
 ### Faire les pages / autres articles
 ### Accueil
