@@ -28,7 +28,7 @@ https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 - [x] Mettre lien lorsque l'on clique sur shortcut (href) - G
 - [x] Lien navbar mobile 
 - [x] Footer link 1, link 2, solidarité ukraine
-- [ ] Problème navbar hoverbar lorsque media type trop petit  
+- [x] Problème navbar hoverbar lorsque media type trop petit  
 
 ## At the end / when time
 - [x] ~~Ajouter / retirer En un clic ! en fonction de media-type~~ [DELETED]
