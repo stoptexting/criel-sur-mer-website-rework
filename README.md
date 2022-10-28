@@ -1,4 +1,4 @@
-# Criel-Sur-Mer Website Reworked
+# Criel-Sur-Mer Website Reworked Final
 https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 # TODO LIST
 ## TOP PRIORITY MISSION 1
