@@ -2,7 +2,6 @@
 https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
 # TODO LIST
 ## TOP PRIORITY MISSION 1
-### Faire les pages / autres articles
 ### Accueil
 - [x] Finir page accueil (Navbar fix hover-span... + Articles) - Ak/Aa
 - [x] Section responsive + full height + center + padding right
