@@ -1,0 +1,3 @@
+Persons.xlsx : Données fictives, générées à partir d'un API en ligne (OBLIGATOIRE sinon le programme ne marchera pas).
+Sondage.xlsx : Données du Sondage (OBLIGATOIRE sinon le programme ne marchera pas).
+Aliments.xlsx : Aliments pour le sondage (OBLIGATOIRE sinon le programme ne marchera pas).
