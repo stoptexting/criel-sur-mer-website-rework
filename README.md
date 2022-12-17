@@ -1,5 +1,13 @@
 # Criel-Sur-Mer Website Reworked Final
-https://www.criel-sur-mer.fr/ website rework - 2nd year CS Student
+Original website : https://www.criel-sur-mer.fr/  
+Our rework :
+
+![image](https://user-images.githubusercontent.com/103834533/208250158-aeaa6fa0-d608-438c-b8dc-19014e62e32a.png)
+
+![image](https://user-images.githubusercontent.com/103834533/208250215-97c7da0c-d4a7-41ce-8c30-4c5bba756b92.png)
+
+![image](https://user-images.githubusercontent.com/103834533/208250270-c7bd8737-623f-468f-9577-4ca67ebd19da.png)
+
 # TODO LIST
 ## TOP PRIORITY MISSION 1
 ### Accueil
