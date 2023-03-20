@@ -1,0 +1,227 @@
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+global.window = window;
+global.document = window.document;
+global.$ = require('jquery');
+
+const sondage = require("../js/sondage");
+
+const avertissement = document.createElement('div');
+const elm = document.createElement('input');
+const elm1 = document.createElement('input');
+const elm2 = document.createElement('input');
+const elm3 = document.createElement('input');
+elm.setAttribute('id', 'Nom');
+elm1.setAttribute('id', 'Prenom');
+elm2.setAttribute('id', 'DateNaissance');
+elm3.setAttribute('id', 'adresse');
+avertissement.setAttribute('id', 'Avertissement');
+
+test('Verification aucun champs vides', () => {
+    elm.value = "bob";
+    elm1.value = "jone";
+    elm2.value = "23/03/2003";
+    elm3.value = "55 rue de la vilette";
+    const tableau = [elm, elm1, elm2, elm3];
+    const tableauAliments = [{ value: 'pomme' }, { value: 'fraise' }, { value: 'peche' }, { value: 'riz' }, { value: 'quiche' }, { value: 'thon' },{ value: 'steak' }, { value: 'ric' }];
+    document.body.appendChild(avertissement);
+    sondage.verif_formulaire(tableau, tableauAliments);
+    expect(avertissement.innerText).toBe('');
+  });
+
+  test('Verification champs vide dans lidentité de la personne inscrites', () => {
+      elm.value = "bob";
+      elm1.value = "";
+      elm2.value = "";
+      elm3.value = "55 rue de la vilette";
+      const tableau1 = [elm1, elm1, elm2, elm3];
+      const tableauAliments1 = [{ value: 'pomme' }, { value: 'fraise' }, { value: 'peche' }, { value: 'riz' }, { value: 'quiche' }, { value: 'thon' },{ value: 'steak' }, { value: 'ric' }];
+      document.body.appendChild(avertissement);
+      sondage.verif_formulaire(tableau1, tableauAliments1);
+      expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires");
+  });
+
+  test('Verification champs vide dans les aliments', () => {
+    elm.value = "bob";
+    elm1.value = "jone";
+    elm2.value = "23/06/2002";
+    elm3.value = "55 rue de la vilette";
+    avertissement.setAttribute('id', 'Avertissement');
+    const tableau1 = [elm1, elm1, elm2, elm3];
+    const tableauAliments1 = [{ value: 'pomme' }, { value: 'fraise' }, { value: '' }, { value: 'riz' }, { value: 'quiche' }, { value: 'thon' },{ value: 'steak' }, { value: 'ric' }];
+    document.body.appendChild(avertissement);
+    sondage.verif_formulaire(tableau1, tableauAliments1);
+    expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires");
+});
+
+const textNom = document.createElement('div');
+const textPrenom = document.createElement('div');
+const textVille = document.createElement('div');
+textNom.setAttribute('id', 'pb-nom');
+textPrenom.setAttribute('id', 'pb-prenom');
+textVille.setAttribute('id', 'pb-ville');
+
+
+
+test('Verification du nom incorrect, prenom et de la ville', () => {
+  elm.value = "44!";
+  elm1.value = "jones";
+  elm2.value = "qilibitin";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNom);
+  document.body.appendChild(textPrenom);
+  document.body.appendChild(textVille)
+  sondage.verif_NomPrenomVille(elm, elm1, elm2, true);
+  expect(avertissement.innerHTML).toBe("Veuillez remplir tous les champs du formulaires correctement");
+  expect(textNom.innerHTML).toBe("Le nom ne doit contenir que des lettres de l'alphabets");
+  expect(textPrenom.innerHTML).toBe("");
+  expect(textVille.innerHTML).toBe("");
+});
+
+test('Verification du nom, prenom incorrect et de la ville incorrect', () => {
+  elm.value = "bob";
+  elm1.value = "carlos!";
+  elm2.value = "qilibitin44";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNom);
+  document.body.appendChild(textPrenom);
+  document.body.appendChild(textVille)
+  sondage.verif_NomPrenomVille(elm, elm1, elm2, true);
+  expect(avertissement.innerHTML).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textNom.innerHTML).toBe("");
+  expect(textPrenom.innerHTML).toBe("Le prenom ne doit contenir que des lettres de l'alphabets");
+  expect(textVille.innerHTML).toBe("Le nom de la ville ne doit contenir que des lettres de l'alphabets");
+});
+
+test('Verification du nom, prenom et de la ville correct', () => {
+  elm.value = "pomme";
+  elm1.value = "jones";
+  elm2.value = "qilibitin";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNom);
+  document.body.appendChild(textPrenom);
+  document.body.appendChild(textVille)
+  sondage.verif_NomPrenomVille(elm, elm1, elm2, true);
+  expect(avertissement.innerHTML).toBe("");
+  expect(textNom.innerHTML).toBe("");
+  expect(textPrenom.innerHTML).toBe("");
+  expect(textVille.innerHTML).toBe("");
+});
+
+const textNaissance = document.createElement('div');
+textNaissance.setAttribute('id', 'pb-naissance');
+
+
+
+test('Verification de la date de naissance, cas année < 1908', () => {
+  elm.value = "03/20/1900";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNaissance);
+  sondage.verif_AnneeNaissance(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textNaissance.innerText).toBe("Veuillez entrez votre vraie date de naissance"); 
+});
+
+test('Verification de la date de naissance, cas age < 18', () => {
+  elm.value = "03/20/2020";
+  elm1.value = "akash";
+  elm2.value = "selvaratnam";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNaissance);
+  sondage.verif_AnneeNaissance(elm);
+  expect(avertissement.innerText).toBe("Redirection page d'accueil"); 
+  expect(textNaissance.innerText).toBe("Vous n'êtez pas majeur, vous ne pouvez pas remplir ce sondage, vous serez donc redirigé vers la page d'accueil"); 
+});
+
+test('Verification de la date de naissance, cas correct', () => {
+  elm.value = "03/20/1964";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textNaissance);
+  sondage.verif_AnneeNaissance(elm, true);
+  expect(avertissement.innerText).toBe(""); 
+  expect(textNaissance.innerText).toBe(""); 
+});
+
+const textPostaleCode = document.createElement('div');
+textPostaleCode.setAttribute('id', 'pb-CodePostale');
+
+test('Verification du code postal de l utilisateur', () => {
+  elm.value = "75015";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textPostaleCode);
+  sondage.verif_PostalCode(elm, true);
+  expect(avertissement.innerText).toBe(""); 
+  expect(textPostaleCode.innerText).toBe(""); 
+});
+
+test('Verification du code postal de l utilisateur incorrect comportant des caractere différent à des chiffres', () => {
+  elm.value = "750!a";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textPostaleCode);
+  sondage.verif_PostalCode(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textPostaleCode.innerText).toBe("Le code postale fournie est invalide"); 
+});
+
+test('Verification du code postal de l utilisateur incorrect composer inferieur à 5', () => {
+  elm.value = "750";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textPostaleCode);
+  sondage.verif_PostalCode(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textPostaleCode.innerText).toBe("Le code postale fournie est invalide"); 
+});
+
+
+
+const textTelephone = document.createElement('div');
+textTelephone.setAttribute('id', 'pb-numtel');
+
+test('Verification numéro de téléphone, inférieur à 10', () => {
+  elm.value = "064027027";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textTelephone);
+  sondage.verif_TelephoneNumber(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textTelephone.innerText).toBe("Le numéro de téléphone fournie est invalide"); 
+});
+
+test('Verification numéro de téléphone, supérieur à 10', () => {
+  elm.value = "064027027";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textTelephone);
+  sondage.verif_TelephoneNumber(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textTelephone.innerText).toBe("Le numéro de téléphone fournie est invalide"); 
+});
+
+test('Verification numéro de téléphone contenant différent que des chiffres', () => {
+  elm.value = "mop0640270";
+  document.body.appendChild(avertissement);
+  document.body.appendChild(textTelephone);
+  sondage.verif_TelephoneNumber(elm, true);
+  expect(avertissement.innerText).toBe("Veuillez remplir tous les champs du formulaires correctement"); 
+  expect(textTelephone.innerText).toBe("Le numéro de téléphone fournie est invalide"); 
+});
+
+test('Verification aliments Corrects', () => {
+  const tableauAliments = [{ value: 'pomme' }, { value: 'fraise' }, { value: 'peche' }, { value: 'riz' }, { value: 'quiche' }, { value: 'thon' },{ value: 'steak' }, { value: 'ric' }];
+  document.body.appendChild(avertissement);
+  sondage.verifAliment(tableauAliments, true);
+  expect(avertissement.innerText).toBe('');
+});
+
+test('Verification aliments Corrects/ cas tableau plusieur meme aliments', () => {
+  const tableauAliments = [{ value: 'pomme' }, { value: 'fraise' }, { value: 'peche' }, { value: 'fraise' }, { value: 'quiche' }, { value: 'thon' },{ value: 'steak' }, { value: 'ric' }];
+  document.body.appendChild(avertissement);
+  sondage.verifAliment(tableauAliments, true);
+  expect(avertissement.innerText).toBe("veuillez choisir des aliments différents dans la liste, probleme aliment n° 2 avec l'aliment n° 4");
+});
+
+test('Appel a la taille de la base de donnée supérieur à 0', async() => {
+  const result = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`);
+  const resultat = await result.json();
+  expect(resultat.taille).toBeGreaterThan(0);
+});
+
