@@ -348,7 +348,7 @@ async function verifAliment(tableauAliments, test){
         }
         else{
             setTimeout(function() {
-                window.location.href = "./index.html";
+                window.location.href = "./SondageAccueil.html";
               }, 5000);
         }
       }
