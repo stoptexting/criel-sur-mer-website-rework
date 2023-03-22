@@ -309,8 +309,9 @@
                               UKRAINE</a>
                         </li>
                         <li>
-                           <a href="./solidarite.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sondage</a>
-                        </li>
+                           <a href="./SondageAccueil.html"
+                           class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sondage</a>
+                       </li>
                      </ul>
                   </div>
                </div>
@@ -642,6 +643,10 @@
                                           class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Solidarité
                                           UKRAINE</a>
                                     </li>
+                                    <li>
+                                       <a href="./SondageAccueil.html"
+                                       class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sondage</a>
+                                   </li>
                                  </ul>
                               </div>
                            </div>
@@ -651,26 +656,26 @@
       </div>
       <div class="pt-12 pb-12  bg-blue-800 bg-opacity-50">
         <div class="flex justify-center">
-            <p class="text-2xl">Aliments préféré des habitants de Criel-Sur-Mer</p>
+            <p class="text-2xl text-white font-bold">Aliments préféré des habitants de Criel-Sur-Mer</p>
         </div>
         <div class="flex justify-center pt-8">
         <div class="flex items-center justify-center border border-yellow-400 h-24 w-5/6 bg-yellow-400 rounded-lg">
-            <p id="top1" class="text-lg">Aliment n°1 : fruit de mer</p>
+            <p id="top1" class="text-lg"></p>
         </div>
         </div>
         <div class="flex justify-center pt-8">
             <div class="flex items-center justify-center border border-[#C0C0C0] h-24 w-5/6 bg-[#C0C0C0] rounded-lg">
-                <p id="top2" class="text-lg">Aliment n°2 : Riz</p>
+                <p id="top2" class="text-lg"></p>
             </div>
         </div>
         <div class="flex justify-center pt-8">
             <div class="flex items-center justify-center border border-[#614e1a] h-24 w-5/6 bg-[#614e1a] rounded-lg">
-                <p id="top3" class="text-lg">Aliment n°3 : Viande</p>
+                <p id="top3" class="text-lg"></p>
             </div>
         </div>
         <div class="pt-16">
          <div class="flex justify-center">
-         <p class="text-lg p-4">Répresentation des préféré aliments des habitants de Criel-sur-mer sous format de Diagramme à batons</p><br>
+         <p class="text-lg p-4 text-white">Répresentation des préféré aliments des habitants de Criel-sur-mer sous format de Diagramme à batons</p><br>
          </div>
             <div class="flex justify-center h-96 w-full">
                <canvas id="myChart" class="w-full h-full pt-6" >
@@ -679,7 +684,7 @@
         </div>
         <div class="pt-8 pb-8">
          <div class="flex justify-center">
-         <p class="text-lg p-4">Répresentation des préféré aliments des habitants de Criel-sur-mer sous format de Diagramme circulaire</p><br>
+         <p class="text-lg p-4 text-white">Répresentation des préféré aliments des habitants de Criel-sur-mer sous format de Diagramme circulaire</p><br>
          </div>
             <div class="flex justify-center h-96 w-full">
                <canvas id="myChart2" class="w-full h-full pt-6" >
@@ -844,50 +849,6 @@
         </div>
   
      </footer>
-   <script>
-      // Burger menus
-      document.addEventListener('DOMContentLoaded', function () {
-         // open
-         const burger = document.querySelectorAll('.navbar-burger');
-         const menu = document.querySelectorAll('.navbar-menu');
-
-         if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-               burger[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         // close
-         const close = document.querySelectorAll('.navbar-close');
-         const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-         if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-               close[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-
-         if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-               backdrop[i].addEventListener('click', function () {
-                  for (var j = 0; j < menu.length; j++) {
-                     menu[j].classList.toggle('hidden');
-                  }
-               });
-            }
-         }
-      });
-
-   </script>
-   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 </body>
 
 </html>
