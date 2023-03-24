@@ -4,7 +4,7 @@ const { window } = new JSDOM();
 global.window = window;
 global.document = window.document;
 global.$ = require('jquery');
-
+const { faker } = require('@faker-js/faker');
 const sondage = require("../js/sondage");
 
 const avertissement = document.createElement('div');
@@ -225,3 +225,144 @@ test('Appel a la taille de la base de donnée supérieur à 0', async() => {
   expect(resultat.taille).toBeGreaterThan(0);
 });
 
+test('Appel a la table alimentation, verification de l aliment numéro 6 : Blé dur précuit, grains entiers, cuisiné, à poêler', async() =>{
+  const result = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/products/6.json`);
+  const resultat = await result.json();
+  expect(resultat.alim_nom_fr).toBe("Blé dur précuit, grains entiers, cuisiné, à poêler");
+})
+
+test('Appel a la table résultat, verification du resultat sondage numéro 6 aliment 1: âtonnet pané soja et blé (convient aux véganes ou végétaliens), préemballée', async() =>{
+  const result = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/UserAlimentation/6.json`);
+  const resultat = await result.json();
+  expect(resultat.aliment1).toBe("Bâtonnet pané soja et blé (convient aux véganes ou végétaliens), préemballée");
+})
+
+test('Insertion manuel dans la base de donne UserAlimention (resultat), verification', async() =>{
+  const result = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`);
+  const resultat = await result.json();
+  const val = resultat.taille;
+  const result2 = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/UserAlimentation/${val}.json`, {
+    method : "PUT",
+    headers : {
+        'Content-Type': 'application/json',
+    },
+    body : JSON.stringify({
+        nom : "joe",
+        prenom : "Don",
+        naissance : "24/03/1999",
+        adresse : "99 avenue versailles",
+        codePostale : "75016",
+        ville : "paris",
+        telephone : "0632489517", 
+        aliment1 : "Blé dur précuit, grains entiers, cuisiné, à poêle",
+        aliment2 : "Bâtonnet pané soja et blé (convient aux véganes ou végétaliens), préemballée",
+        aliment3 : "Carpaccio de boeuf, avec marinade",
+        aliment4 : "Brochette de poisson",
+        aliment5 : "Canard en sauce (poivre vert, chasseur, etc.), préemballé",
+        aliment6 : "Aligot (purée de pomme de terre à la tomme fraîche), préemballé",
+        aliment7 : "Cassoulet, appertisé",
+        aliment8 : "Beignet de légumes",
+        aliment9 : "Croque-monsieur, fait maison",
+        aliment10 : "Brochette de volaille, cuite",
+    }),
+  })
+  if(!result2.ok){
+    throw new error("Base de donnée non connecté");
+  }
+  const valeurFinal = val + 1;
+  const tailleFinale = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`, {
+    method : "PUT",
+    headers : {
+        'Content-Type': 'application/json',
+    },
+    body : JSON.stringify({
+        taille : valeurFinal,
+    }),
+  })
+  if(!result.ok){
+    throw new error("Base de donnée non connecté");
+  }
+
+const resulttaille = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`);
+const resultattailleFinal = await resulttaille.json();
+const valfinal = resultattailleFinal.taille;
+const resultatfinaux = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/UserAlimentation/${val}.json`);
+const resJSON = await resultatfinaux.json();
+const rnom = resJSON.nom;
+const ral1 = resJSON.aliment1;
+expect(rnom).toBe("joe");
+expect(ral1).toBe("Blé dur précuit, grains entiers, cuisiné, à poêle");
+expect(valfinal).toBe(valeurFinal);
+}
+)
+
+test("insertion donnée dans UserAlimentation (résultat) avec la génération de donnée (faker)", async()=>{
+  const result = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`);
+  const resultat = await result.json();
+  var val = resultat.taille;
+  var al1Gen = "";
+  var tabAlimentsGenerer = new Array();
+  var nomP = "";
+  for(var l = 0; l < 10; l++){
+    var indice = faker.mersenne.rand(999, 0);
+    var resultatAlimentGenerer = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/products/${indice}.json`);
+    var resultatAlimentsGen = await resultatAlimentGenerer.json();
+    var alimentGenerer = resultatAlimentsGen.alim_nom_fr;
+    tabAlimentsGenerer.push(alimentGenerer);
+  }
+    var date = faker.date.between('1908-01-01', '2005-01-01');
+    nomP = faker.name.lastName();
+    var d = new Date(date);
+    al1Gen = tabAlimentsGenerer[0];
+    var formattedDate = date.toLocaleDateString();
+    var result2 = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/UserAlimentation/${val}.json`, {
+        method : "PUT",
+        headers : {
+            'Content-Type': 'application/json',
+        },
+        body : JSON.stringify({
+            nom : nomP,
+            prenom : faker.name.firstName(),
+            naissance : formattedDate,
+            adresse : faker.address.streetAddress(),
+            codePostale : faker.address.zipCode('#####'),
+            ville : faker.address.city(),
+            telephone : faker.phone.phoneNumber('##########'), 
+            aliment1 : al1Gen,
+            aliment2 : tabAlimentsGenerer[1],
+            aliment3 : tabAlimentsGenerer[2],
+            aliment4 : tabAlimentsGenerer[3],
+            aliment5 : tabAlimentsGenerer[4],
+            aliment6 : tabAlimentsGenerer[5],
+            aliment7 : tabAlimentsGenerer[6],
+            aliment8 : tabAlimentsGenerer[7],
+            aliment9 : tabAlimentsGenerer[8],
+            aliment10 : tabAlimentsGenerer[9],
+        }),
+      })
+      if(!result2.ok){
+        throw new error("Base de donnée non connecté");
+      }
+
+const tailleFinale = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`, {
+          method : "PUT",
+          headers : {
+              'Content-Type': 'application/json',
+          },
+          body : JSON.stringify({
+              taille : val + 1,
+          }),
+        })
+        if(!result.ok){
+          throw new error("Base de donnée non connecté");
+        }
+        var resultAlimentGenereFinal = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/UserAlimentation/${val}.json`); 
+        var resgenFin =  await resultAlimentGenereFinal.json();
+        expect(resgenFin.nom).toEqual(nomP);
+        expect(resgenFin.aliment1).toEqual(al1Gen);
+        const resulttaille = await fetch(`https://crielsurmer-eb4e8-default-rtdb.europe-west1.firebasedatabase.app/TailleBD.json`);
+        const resultattailleFinal = await resulttaille.json();
+        const valfinal = resultattailleFinal.taille;
+        expect(valfinal).toBe(val + 1);               
+
+})
